@@ -52,6 +52,14 @@ angular
         templateUrl: 'views/verhaal-3.html',
         controller: 'Verhaal3Ctrl'
       })
+      .when('/verhaal-4', {
+        templateUrl: 'views/verhaal-4.html',
+        controller: 'Verhaal4Ctrl'
+      })
+      .when('/menu', {
+        templateUrl: 'views/menu.html',
+        controller: 'MenuCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
