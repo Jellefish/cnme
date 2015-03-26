@@ -1,0 +1,15 @@
+.textballon-links,.textballon-rechts {
+  min-height: 150px;
+  max-height: 250px;
+  background-color: #ffffff;
+  width: 175px;
+  border-radius: 10px;
+}
+
+.textballon-links {
+  margin-left: 50px;
+}
+
+.textballon-rechts {
+  display: none;
+}
