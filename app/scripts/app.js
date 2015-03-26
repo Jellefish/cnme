@@ -60,6 +60,10 @@ angular
         templateUrl: 'views/menu.html',
         controller: 'MenuCtrl'
       })
+      .when('/verhaal-5', {
+        templateUrl: 'views/verhaal-5.html',
+        controller: 'Verhaal5Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
