@@ -1,0 +1,50 @@
+@mixin button($padding,$fontsize){
+  border: none;
+  -webkit-appearance:none;
+  padding:$padding;
+  background-color:#31BA8E;
+  border-radius:5px;
+  color:#fff;
+  font-size:$fontsize;
+  box-shadow: 0 8px #258969;
+  width:135px;
+}
+
+.main-button {
+  color:#fff;
+  font-size:30px;
+  text-decoration: none;
+  background-color:#31BA8E;
+  border-radius:5px;
+  padding:10px 0;
+  width:170px;
+  position:absolute;
+  left:0;
+  right:0;
+  margin:0 auto;
+  z-index:2;
+}
+
+.main-button-back-layer {
+  color:#fff;
+  font-size:30px;
+  text-decoration: none;
+  background-color:#258969;
+  border-radius:5px;
+  padding:10px 0;
+  width:170px;
+  position:absolute;
+  left:0;
+  right:0;
+  margin:0 auto;
+  margin-top:8px;
+  z-index:1;
+}
+
+.menu-knop {
+  position:relative;
+}
+
+button {
+  @include button(5px, 25px)
+}

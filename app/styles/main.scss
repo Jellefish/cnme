@@ -1,6 +1,7 @@
+@import 'base/normalize';
 @import 'base/typography';
 @import 'component/nav';
-@import 'base/normalize';
+@import 'component/buttons';
 
                                                                 /* ========= MAIN ========= */
 body {
@@ -13,6 +14,7 @@ body {
 }
 a {
   color: #ffffff;
+  text-decoration: none;
 }
 
 img {
@@ -43,40 +45,7 @@ img {
   font-size:23px;
 }
 
-.main-button {
-  color:#fff;
-  font-size:30px;
-  text-decoration: none;
-  background-color:#31BA8E;
-  border-radius:5px;
-  padding:10px 0;
-  width:170px;
-  position:absolute;
-  left:0;
-  right:0;
-  margin:0 auto;
-  z-index:2;
-}
 
-.main-button-back-layer {
-  color:#fff;
-  font-size:30px;
-  text-decoration: none;
-  background-color:#258969;
-  border-radius:5px;
-  padding:10px 0;
-  width:170px;
-  position:absolute;
-  left:0;
-  right:0;
-  margin:0 auto;
-  margin-top:8px;
-  z-index:1;
-}
-
-.menu-knop {
-  position:relative;
-}
 
                                                                /* ========= MENU ========= */
 nav {
@@ -235,48 +204,19 @@ nav ul li {
   background-color:rgba(0,0,0,0.5);
 }
 
-#buttons {
+#footer .button-wrap {
   position: relative;
-  background-color: blue;
-  height: 200px;
-  width: 90%;
+  display:block;
+  width:90%;
   margin: 0 auto;
-  padding: 0 auto;
-}
-
-#previous {
-  position: absolute;
-  margin-top:10px;
-  float: left;
-}
-#next {
-  position: absolute;
-  margin-top:10px;
-  float: right;
-  right: 0;
-}
-
-.button {
-  color:#fff;
-  font-size:25px;
-  text-decoration: none;
-  background-color:#31BA8E;
-  border-radius:5px;
-  padding:5px 0;
-  width:125px;
-  position:absolute;
-  z-index:2;
-}
-
-.button-back-layer {
-  color:#fff;
-  font-size:25px;
-  text-decoration: none;
-  background-color:#258969;
-  border-radius:5px;
-  padding:5px 0;
-  width:125px;
-  position:absolute;
-  margin-top:8px;
-  z-index:1;
+  margin-top: 10px;
+  button {
+    position: absolute;
+  }
+  button:nth-child(1) {
+    left:0;
+  }
+  button:nth-child(2) {
+    right:0;
+  }
 }
