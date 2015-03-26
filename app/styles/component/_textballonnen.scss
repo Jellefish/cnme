@@ -1,15 +1,23 @@
-.textballon-links,.textballon-rechts {
+#textballon-links,.textballon-rechts {
+  position: relative;
   min-height: 150px;
   max-height: 250px;
   background-color: #ffffff;
   width: 175px;
   border-radius: 10px;
+  overflow-y:auto;
 }
 
-.textballon-links {
+#textballon-links {
   margin-left: 50px;
 }
 
-.textballon-rechts {
+#textballon-rechts {
   display: none;
+}
+
+#textballon-links p,#textballon-rechts p {
+  color: #a9a9a9;
+  text-align: left;
+  font-size: 14px !important;
 }
