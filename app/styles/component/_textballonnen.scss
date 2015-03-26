@@ -1,23 +1,36 @@
-#textballon-links,.textballon-rechts {
-  position: relative;
-  min-height: 150px;
+#textballon-links,#textballon-rechts {
+  position: absolute;
+  min-height: 0px;
   max-height: 250px;
   background-color: #ffffff;
-  width: 175px;
+  width: 200px;
   border-radius: 10px;
   overflow-y:auto;
+  z-index:1;
 }
 
 #textballon-links {
-  margin-left: 50px;
+  float: left;
+  margin-top: 200px;
+  margin-left: 30px;
+  box-shadow: -5px 5px #7f8c8d;
 }
 
 #textballon-rechts {
-  display: none;
+  float: right;
+  margin-top: 200px;
+  right: 30px;
+  box-shadow: 5px 5px #7f8c8d;
 }
 
 #textballon-links p,#textballon-rechts p {
-  color: #a9a9a9;
+  color: #7f8c8d;
   text-align: left;
-  font-size: 14px !important;
+  font-size: 16px !important;
+  margin:10px auto !important;
+  line-height: 15px;
+}
+
+#textballon-links p span,#textballon-rechts p span{
+  color: #31BA8E;
 }

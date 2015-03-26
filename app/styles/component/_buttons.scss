@@ -10,41 +10,43 @@
   width:135px;
 }
 
-.main-button {
-  color:#fff;
-  font-size:30px;
-  text-decoration: none;
-  background-color:#31BA8E;
-  border-radius:5px;
-  padding:10px 0;
-  width:170px;
-  position:absolute;
-  left:0;
-  right:0;
-  margin:0 auto;
-  z-index:2;
+#footer .button-wrap {
+  position: relative;
+  display:block;
+  width:90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  button {
+    position: absolute;
+  }
+  button:nth-child(1) {
+    left:0;
+  }
+  button:nth-child(2) {
+    right:0;
+  }
 }
-
-.main-button-back-layer {
-  color:#fff;
-  font-size:30px;
-  text-decoration: none;
-  background-color:#258969;
-  border-radius:5px;
-  padding:10px 0;
-  width:170px;
-  position:absolute;
-  left:0;
-  right:0;
-  margin:0 auto;
-  margin-top:8px;
-  z-index:1;
-}
-
 .menu-knop {
   position:relative;
 }
 
 button {
   @include button(5px, 25px)
+}
+
+#steen {
+  float: right;
+  margin-right:20px;
+  cursor:pointer;
+}
+#steen div {
+  margin-top:20px;
+  width: 72px;
+  height: 72px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+#steen img{
+  width: 60px;
+  margin-top: 15px;
 }

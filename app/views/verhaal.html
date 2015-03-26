@@ -1,3 +1,4 @@
+<div id="achtergrond-verhaal"></div>
 <header>
   <a ng-href="#/menu">
     <div id="hamburger">
@@ -9,18 +10,21 @@
   </a>
 </header>
 <div id="main-area">
-  <div id="textballon-links">
-    <p> Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id elit non mi porta gravida at eget metus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-  </div>
+    <div id="textballon-links">
+      <p> Welkom in Borgharen! Ik ben boswachter Ruud. Ik ben op zoek naar hulpje. Heb jij het in je om mijn hulpboswachter te worden?
+      </p>
+    </div>
+    <img class="char-right" id="flipped" src="/images/boswachter-01.png" alt="boswachter-ruud">
+</div>
 
-  <div id="textballon-rechts">
-
+<div id="footer">
+  <div class="button-wrap">
+      <button><a ng-href="#/menu">< VORIGE</a></button>
+      <button><a ng-href="#/verhaal-2">VOLGENDE ></a></button>
   </div>
 </div>
 
-  <div id="footer">
-    <div class="button-wrap">
-      <button><a ng-href="#/verhaal">< VORIGE</a></button>
-      <button><a ng-href="#/verhaal-2">VOLGENDE ></a></button>
-    </div>
-  </div>
+<script>
+  $('body').css('background','url(/images/achtergrond.jpg)');
+  $('body').css('background-size','cover');
+</script>

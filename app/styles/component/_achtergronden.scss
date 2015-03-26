@@ -1,0 +1,15 @@
+#achtergrond-verhaal {
+  position: fixed;
+  //background: center/cover url(/images/achtergrond.jpg) no-repeat;
+  width:100vw;
+  height:100vh;
+  z-index:-900;
+}
+
+#achtergrond-opdracht1 {
+  position: absolute;
+  background: center/cover url(/images/achtergrond1.jpg) no-repeat;
+  width:100vw;
+  height:100%;
+  z-index:-900;
+}
