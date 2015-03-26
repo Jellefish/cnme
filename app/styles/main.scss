@@ -6,6 +6,7 @@
 @import 'component/chars';
 @import 'component/achtergronden';
 
+
                                                                 /* ========= MAIN ========= */
 body {
   background: center/cover url(/images/bg.jpg) no-repeat fixed;
@@ -181,6 +182,57 @@ nav ul li {
   display:none;
 }
                                                                /* ========= VERHAALLIJN ========= */
+
+/* SCORE */
+#trophy {
+  bottom:0;
+  position:absolute;
+  left:0;
+  right:0;
+  z-index:9999;
+}
+
+#huidige-score {
+  color:#9c9c9c;
+  position:absolute;
+  top:105px;
+  font-size:30px;
+  z-index:9999;
+  left:0;
+  right:0;
+}
+
+.popup-content button {
+  left:0;
+  right:0;
+  margin:0 auto;
+  position:absolute;
+  width:85%;
+  top:85px;
+}
+
+.popup-content button:nth-child(2) {
+  top:140px;
+}
+
+#huidige-score-resultaat {
+  color:#595959;
+  position:absolute;
+  top:130px;
+  font-size:30px;
+  z-index:9999;
+  left:0;
+  right:0;
+}
+
+.popup-info {
+  position:absolute;
+  left:0;
+  right:0;
+  margin:0 auto;
+  top:105px;
+}
+                                                               /* ========= VERHAALLijN ========= */
 #hamburger span {
   display: block;
   width: 50px;
