@@ -7,13 +7,24 @@
         <span></span>
      </div>
   </a>
-  <a id="steen" ng-href="#/menu">
+  <a id="steen">
     <div>
       <img src="/images/steen-08.png" alt="steen">
     </div>
   </a>
 </header>
+    <img class="close" src="/images/close.png" alt="close">
 <div id="main-area">
+  <div class="popup-black">
+    </div>
+    <div class="popup">
+      <span class="popup-content" id="popup1">
+        <h1>Stenen</h1>
+        <span id="huidige-score">
+          Huidige score
+        </span>
+      </span>
+    </div>
     <div id="textballon-links">
       <p> Ik zoek een <span>Vuursteen</span>, <span>Rotssteen</span> en <span>Zeesteen</span>. Klik op de steen rechtsboven om een stenenoverzicht te bekijken en een foto te maken.</p>
     </div>
@@ -27,6 +38,20 @@
 </div>
 
 <script>
+
+$('#steen').click(function() {
+  $('.popup-black').fadeIn(0);
+  $('.popup').fadeIn(0);
+  $('.close').fadeIn(0);
+});
+
+$('.close').click(function() {
+  $('.popup-black').fadeOut(0);
+  $('.popup').fadeOut(0);
+  $('.close').fadeOut(0);
+  $('.popup-content').fadeOut(0);
+});
+
   $('body').css('background','url(/images/achtergrond1.jpg) no-repeat');
   $('body').css('background-size','cover');
 </script>
