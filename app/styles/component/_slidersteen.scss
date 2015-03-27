@@ -1,0 +1,30 @@
+.containerslider {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.containerslider div {
+  width: 80%;
+  display: inline-block;
+  display: none;
+}
+.containerslider img {
+  width: 100%;
+  height: auto;
+}
+
+#slider button {
+  position: absolute;
+}
+
+#slidernext {
+  right: 5px;
+  z-index:100;
+}
+
+#sliderprev {
+  left: 5px;
+  z-index:100;
+}
+

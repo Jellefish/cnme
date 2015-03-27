@@ -5,6 +5,7 @@
 @import 'component/textballonnen';
 @import 'component/chars';
 @import 'component/achtergronden';
+@import 'component/slidersteen';
 
 
                                                                 /* ========= MAIN ========= */
@@ -121,11 +122,10 @@ nav ul li {
   float:left;
   width:100%;
   text-align:center;
-  margin-top:20px;
   color:#fff;
   text-decoration:none;
   font-size:25px;
-  margin-bottom:25px;
+  margin-bottom:35px;
 }
 
 /* POPUP */

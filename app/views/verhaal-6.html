@@ -12,6 +12,7 @@
       <img src="/images/steen-08.png" alt="steen">
     </div>
   </a>
+
 </header>
     <img class="close" src="/images/close.png" alt="close">
 <div id="main-area">
@@ -20,13 +21,25 @@
     <div class="popup">
       <span class="popup-content" id="popup1">
         <h1>Stenen</h1>
-        <span id="huidige-score">
-          Huidige score
-        </span>
+          <section id="slider">
+            <button id="slidernext">></button>
+            <button id="sliderprev"><</button>
+            <div class="containerslider">
+              <div style="display: inline-block;">
+                <img src="/images/steen1.png"/>
+              </div>
+              <div>
+               <img src="/images/steen2.png"/>
+              </div>
+              <div>
+                <img src="/images/steen3.png"/>
+              </div>
+            </div>
+          </section>
       </span>
     </div>
     <div id="textballon-links">
-      <p> Ik zoek een <span>Vuursteen</span>, <span>Rotssteen</span> en <span>Zeesteen</span>. Klik op de steen rechtsboven om een stenenoverzicht te bekijken en een foto te maken.</p>
+      <p> Ik zoek een <span>Vuursteen</span>, <span>Rotssteen</span> en <span>Zeesteen</span>. Klik op de steen rechtsboven om een stenenoverzicht te bekijken. Klik op 'Neem Foto' om een foto te nemen.</p>
     </div>
     <img id="worm" class="char-left" src="/images/worm-07.png" alt="boswachter-ruud">
 </div>
@@ -34,6 +47,7 @@
 <div id="footer">
   <div class="button-wrap">
       <button><a ng-href="#/verhaal-5">< VORIGE</a></button>
+      <button><a ng-href="#/verhaal-6">NEEM FOTO ></a></button>
   </div>
 </div>
 
@@ -43,6 +57,7 @@ $('#steen').click(function() {
   $('.popup-black').fadeIn(0);
   $('.popup').fadeIn(0);
   $('.close').fadeIn(0);
+  $('.popup-content').fadeIn(0);
 });
 
 $('.close').click(function() {
@@ -54,4 +69,32 @@ $('.close').click(function() {
 
   $('body').css('background','url(/images/achtergrond1.jpg) no-repeat');
   $('body').css('background-size','cover');
+
+
+var currentIndex = 0,
+  items = $('.containerslider div'),
+  itemAmt = items.length;
+
+function cycleItems() {
+  var item = $('.containerslider div').eq(currentIndex);
+  items.hide();
+  item.css('display','inline-block');
+}
+
+$('#slidernext').click(function() {
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+});
+
+$('#sliderprev').click(function() {
+  currentIndex -= 1;
+  if (currentIndex < 0) {
+    currentIndex = itemAmt - 1;
+  }
+  cycleItems();
+});
+
 </script>
