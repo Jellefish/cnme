@@ -68,6 +68,10 @@ angular
         templateUrl: 'views/verhaal-6.html',
         controller: 'Verhaal6Ctrl'
       })
+      .when('/verhaal-7', {
+        templateUrl: 'views/verhaal-7.html',
+        controller: 'Verhaal7Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

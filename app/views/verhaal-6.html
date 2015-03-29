@@ -21,18 +21,25 @@
     <div class="popup">
       <span class="popup-content" id="popup1">
         <h1>Stenen</h1>
+
           <section style="width:100%;" id="slider">
             <button style="width:30px;right:5px;left:inherit;top:150px;" id="slidernext">></button>
             <button style="width:30px;left:5px;right:inherit;top:150px;" id="sliderprev"><</button>
             <div class="containerslider">
               <div style="display: inline-block;">
                 <img src="/images/steen1.png"/>
+                <h2> Rotssteen </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ducimus ab cumque nobis voluptatem, quos ratione neque quisquam harum, optio suscipit similique eaque sunt non reiciendis minus veniam unde architecto.</p>
               </div>
               <div>
                <img src="/images/steen2.png"/>
+                <h2> Rotssteen </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, dolores, quidem veritatis sint adipisci fugiat dolore, voluptatum similique, totam optio modi enim iusto magni aliquam libero perferendis eaque alias expedita?</p>
               </div>
               <div>
                 <img src="/images/steen3.png"/>
+                <h2> Rotssteen </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est recusandae sed a illo laboriosam error labore consequatur. Quis debitis quo officiis cumque omnis, officia temporibus odit, similique provident nobis eos.</p>
               </div>
             </div>
           </section>
@@ -47,7 +54,7 @@
 <div id="footer">
   <div class="button-wrap">
       <button><a ng-href="#/verhaal-5">< VORIGE</a></button>
-      <button><a ng-href="#/verhaal-6">NEEM FOTO ></a></button>
+      <button><a ng-href="#/verhaal-7">NEEM FOTO ></a></button>
   </div>
 </div>
 
@@ -58,6 +65,7 @@ $('#steen').click(function() {
   $('.popup').fadeIn(0);
   $('.close').fadeIn(0);
   $('.popup-content').fadeIn(0);
+  $('#textballon-links').fadeOut(0);
 });
 
 $('.close').click(function() {
@@ -65,6 +73,7 @@ $('.close').click(function() {
   $('.popup').fadeOut(0);
   $('.close').fadeOut(0);
   $('.popup-content').fadeOut(0);
+  $('#textballon-links').fadeIn(0);
 });
 
   $('body').css('background','url(/images/achtergrond1.jpg) no-repeat');
