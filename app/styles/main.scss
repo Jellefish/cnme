@@ -9,6 +9,11 @@
 
 
                                                                 /* ========= MAIN ========= */
+
+html,body {
+  overflow-y: hidden;
+  height: 100%;
+}
 body {
   background: center/cover url(/images/bg.jpg) no-repeat fixed;
   color: #fff;
@@ -17,6 +22,7 @@ body {
   padding:0;
   margin:0;
   z-index:-901;
+  min-height: 100vh;
 }
 
 a {

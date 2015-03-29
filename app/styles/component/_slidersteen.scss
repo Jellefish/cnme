@@ -4,11 +4,33 @@
   text-align: center;
   position: relative;
 }
+
 .containerslider div {
   width: 80%;
   display: inline-block;
   display: none;
+  margin-top: -30px;
 }
+
+.containerslider div h2{
+  color: #666666;
+  font-size: 18px !important;
+  width: 100%;
+  overflow:auto;
+  max-height: 130px;
+  margin:0;
+}
+
+.containerslider div p{
+  color: #7f8c8d;
+  font-size: 16px !important;
+  margin: 10px auto !important;
+  line-height: 15px;
+  width: 100%;
+  overflow:auto;
+  max-height: 130px;
+}
+
 .containerslider img {
   width: 100%;
   height: auto;
@@ -19,12 +41,12 @@
 }
 
 #slidernext {
-  right: 5px;
+  right: 0;
   z-index:100;
 }
 
 #sliderprev {
-  left: 5px;
+  left: 0;
   z-index:100;
 }
 
