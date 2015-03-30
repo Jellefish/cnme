@@ -11,8 +11,8 @@
                                                                 /* ========= MAIN ========= */
 
 html,body {
-  overflow-y: hidden;
-  height: 100%;
+  //overflow-y: hidden;
+  //height: 100%;
 }
 body {
   background: center/cover url(/images/bg.jpg) no-repeat fixed;
@@ -236,7 +236,33 @@ nav ul li {
   left:0;
   right:0;
   margin:0 auto;
-  top:105px;
+  top:135px;
+  padding:20px;
+  color:#595959;
+  display:none;
+  background-color:#fff;
+  z-index:9999;
+  width:70%;
+  border-radius:5px;
+  max-height: 205px;
+  overflow-y:scroll;
+}
+
+.popup-info2 {
+  position:absolute;
+  left:0;
+  right:0;
+  margin:0 auto;
+  top:190px;
+  padding:20px;
+  color:#595959;
+  display:none;
+  background-color:#fff;
+  z-index:9998;
+  width:70%;
+  border-radius:5px;
+  max-height: 155px;
+  overflow-y:scroll;
 }
                                                                /* ========= VERHAALLijN ========= */
 #hamburger span {

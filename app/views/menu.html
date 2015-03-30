@@ -33,13 +33,14 @@
   </span>
   <span class="popup-content" id="popup3">
     <h1>Informatie</h1>
-    <button>
+    <button id="cnme-info">
       CNME
     </button>
-    <p class="popup-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+    <p class="popup-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
     <button id="app-info">
       Over app
     </button>
+    <p class="popup-info2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
   </span>
 </div>
 <script>
@@ -62,6 +63,16 @@ $('#menu-left2').click(function() {
 });
 $('#menu-right2').click(function() {
   $('#popup3').fadeIn(0);
+});
+
+$('#cnme-info').click(function() {
+  $('.popup-info').slideToggle();
+  $('.popup-info2').slideUp();
+});
+
+$('#app-info').click(function() {
+  $('.popup-info2').slideToggle();
+  $('.popup-info').slideUp();
 });
 
   $('body').css('background','url(/images/bg.jpg) no-repeat');
