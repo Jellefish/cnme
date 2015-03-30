@@ -1,12 +1,12 @@
 
 <div style="min-height:100vh;" id="main-area">
-    <input type="file" accept="video/*;capture=camcorder" id="cameraInput">
+    <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
     <img src="" alt="" id="preview">
     <div id="canvas"><canvas id="maincanvas"></canvas></div>
-    <p id="upload-info">Klik op de camera om een foto te maken/uploaden.</p>
+    <p id="upload-info">Tik op de camera om een foto te maken/uploaden.</p>
     <img id="uploader" src="/images/camera.png">
-    <div id="black">
-    </div>
+    <div id="black"></div>
+   
 </div>
 
 <div id="footer">
@@ -23,8 +23,8 @@ var imageUploadButton = document.getElementById('uploader');
 		$('#uploader').on('click', function(e){
 			
 			e.preventDefault();
-			var evt = document.createEvent("HTMLEvents");
-			evt.initEvent("click", true, true); 
+			var evt = document.createEvent('HTMLEvents');
+			evt.initEvent('click', true, true); 
 			document.getElementById('cameraInput').dispatchEvent(evt);
 
 		});
@@ -52,11 +52,11 @@ var imageUploadButton = document.getElementById('uploader');
 
                 context.drawImage(imageObj, 0, 0, newWidth, newHeight);
 
-                var data = canvas.toDataURL("image/jpeg", 1.0);
+                var data = canvas.toDataURL('image/jpeg', 1.0);
 
-          localStorage.setItem("image", data);
+          localStorage.setItem('image', data);
 
-          document.getElementById('preview').src = data;
+          document.getElementById('maincanvas').src = data;
 
 
             }
@@ -70,12 +70,12 @@ var imageUploadButton = document.getElementById('uploader');
 
     }
 
-    $("#cameraInput").change(function(){
+    $('#cameraInput').change(function(){
         readURL(this);
     });
 
-    if(localStorage.getItem("image")){
-      document.getElementById('preview').src = localStorage.getItem("image");
+    if(localStorage.getItem('image')){
+      document.getElementById('preview').src = localStorage.getItem('image');
     }
 
   $('body').css('background','url(/images/achtergrond1.jpg) no-repeat');
