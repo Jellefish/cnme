@@ -283,6 +283,62 @@ nav ul li {
   background-color: #ffffff;
   border-radius: 10px;
 }
+
+#cameraInput {
+  position: fixed; top:0; left: 0; transform: translateX(-10000px);
+}
+
+#uploader {
+  height:60px;
+  width:60px !important;
+  position:absolute;
+  bottom:100px;
+  left:0;
+  right:0;
+  margin:0 auto;
+  z-index:9999;
+  cursor:pointer;
+}
+
+#black {
+  height:100vh;
+  position:fixed;
+  background-color:rgba(0,0,0,0.8);
+  width:100%;
+  left:0;
+  top:0;
+  z-index:-1;
+}
+
+#preview {
+  display:none;
+}
+
+#canvas {
+  position:absolute;
+  top:100px;
+  left:0;
+  right:0;
+  margin:0 auto;
+  height:250px;
+  width:250px;
+  overflow:hidden;
+}
+#canvas #maincanvas {
+  width:250px;
+  left:0;
+  right:0;
+  margin:0 auto;
+}
+
+#upload-info {
+  width:75%;
+  position:absolute;
+  left:0;
+  right:0;
+  margin:0 auto;
+  top:100px;
+}
 /* FOOTER */
 
 #footer {
