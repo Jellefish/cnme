@@ -7,12 +7,12 @@
 @import 'component/achtergronden';
 @import 'component/slidersteen';
 
-
                                                                 /* ========= MAIN ========= */
 
 html,body {
   //overflow-y: hidden;
   //height: 100%;
+  min-height:100vh;
 }
 
 body {
@@ -187,6 +187,20 @@ nav ul li {
 .popup-content {
   display:none;
 }
+
+#voltooid {
+  height:350px;
+  width:75%;
+  position:absolute;
+  background-color:#ececec;
+  border-radius:20px;
+  left:0;
+  right:0;
+  top:50px;
+  margin:0 auto;
+  padding-top:0;
+  z-index:9999;
+  }
                                                                /* ========= VERHAALLIJN ========= */
 
 /* SCORE */
