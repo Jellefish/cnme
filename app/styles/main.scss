@@ -321,6 +321,7 @@ nav ul li {
 
 #cameraInput {
   position: fixed; top:0; left: 0; transform: translateX(-10000px);
+  -webkit-transform: translateX(-10000px);
 }
 
 #uploader {
