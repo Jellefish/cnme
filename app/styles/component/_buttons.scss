@@ -65,7 +65,12 @@
   display:none !important;
 }
 
+.activated {
+  display:block !important;
+}
+
 #begin {
   @include button(5px, 25px);
   margin: 0 auto;
+  display:none;
 }
