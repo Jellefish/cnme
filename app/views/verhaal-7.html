@@ -6,13 +6,13 @@
     <p id="upload-info">Tik op de camera om een foto te maken/uploaden.</p>
     <img id="uploader" src="/images/camera.png">
     <div id="black"></div>
-   
+
 </div>
 
 <div id="footer">
   <div class="button-wrap">
-      <button><a ng-href="#/verhaal-6">&#60; VORIGE</a></button>
-      <button id="volgende" class="score25"><a ng-href="#/verhaal-8">VOLGENDE &#62;</a></button>
+      <a class="button" ng-href="#/verhaal-6">&#60; VORIGE</a>
+      <a id="volgende" class="score25" ng-href="#/verhaal-8">VOLGENDE &#62;</a>
   </div>
 </div>
 
@@ -21,10 +21,10 @@ $('#volgende').fadeOut(0);
 var imageUploadButton = document.getElementById('uploader');
 
 		$('#uploader').on('click', function(e){
-			
+
 			e.preventDefault();
 			var evt = document.createEvent('HTMLEvents');
-			evt.initEvent('click', true, true); 
+			evt.initEvent('click', true, true);
 			document.getElementById('cameraInput').dispatchEvent(evt);
 
 		});
@@ -35,14 +35,14 @@ var imageUploadButton = document.getElementById('uploader');
       var imageObj = new Image();
 
       if (input.files && input.files[0]) {
-            
+
             var reader = new FileReader();
 
             reader.onload = function (e) {
               console.log(e);
                 imageObj.src = e.target.result;
 
-  
+
 
                 var newWidth = imageObj.width * 0.4;
                 var newHeight = imageObj.height * 0.4;

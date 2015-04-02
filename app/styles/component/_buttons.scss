@@ -24,13 +24,13 @@
   width:90%;
   margin: 0 auto;
   margin-top: 10px;
-  button {
+  .button {
     position: absolute;
   }
-  button:nth-child(1) {
+  .button:nth-child(1) {
     left:0;
   }
-  button:nth-child(2) {
+  .button:nth-child(2) {
     right:0;
   }
 }
@@ -38,7 +38,7 @@
   position:relative;
 }
 
-button {
+.button {
   @include button(5px, 25px)
 }
 
