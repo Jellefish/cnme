@@ -1,13 +1,14 @@
 @mixin button($padding,$fontsize){
   border: none;
   -webkit-appearance:none;
-  padding:$padding;
   background-color:#31BA8E;
   border-radius:5px;
   color:#fff;
+  padding:$padding;
   font-size:$fontsize;
   box-shadow: 0 8px #258969;
-  width:135px;
+  width:120px;
+  display: block;
 }
 
 #main {
@@ -62,4 +63,9 @@
 
 .disabled {
   display:none;
+}
+
+#begin {
+  @include button(5px, 25px);
+  margin: 0 auto;
 }
