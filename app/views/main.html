@@ -31,9 +31,10 @@
       if (checkDistance(loc1.lat, loc1.lon, loc2.lat, loc2.lon, proximity) === false) {
           x.innerHTML = "Je bent niet in de buurt van Borgharen! Je kunt deze app alleen gebruiken in het natuurgebied van Borgharen.";
           var button = document.getElementById("begin");
-          button.className = button.className + " activated";
+          button.className = button.className + " disabled";
       } else {
           x.innerHTML = "Welkom in Borgharen! Ik ben boswachter Ruud. Heb jij het in je om boswachter te worden?";
+          button.className = button.className + " activated";
       }
   }
 
