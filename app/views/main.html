@@ -1,3 +1,91 @@
+<script>
+  // Location Zuyd
+  var BorgLat = 50.886528; //moet nog borgharen lat worden
+  var BorgLng = 5.686760; //moet nog borgharen l worden
+
+  // Maximum distance from coordinates.
+  var proximity = 1500;
+
+  var x = document.getElementById("welkom");
+
+  function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(positionValid);
+      } else {
+          p.innerHTML = "Je moet je locatieondersteuning toestaan om de app te kunnen gebruiken.";
+      }
+  }
+
+  function positionValid(position)
+  {
+      loc1 = {
+        lat: position.coords.latitude,
+        lon: position.coords.longitude
+      };
+
+      loc2 = {
+        lat: BorgLat,
+        lon: BorgLng
+      };
+
+      if (checkDistance(loc1.lat, loc1.lon, loc2.lat, loc2.lon, proximity) === false) {
+          x.innerHTML = "Je bent niet in de buurt van Borgharen! Je kunt deze app alleen gebruiken in het natuurgebied van Borgharen.";
+          var button = document.getElementById("begin");
+          button.className = button.className + "disabled";
+      } else {
+          x.innerHTML = "Welkom in Borgharen! Ik ben boswachter Ruud. Heb jij het in je om boswachter te worden?";
+      }
+  }
+
+  /**
+   * Computes the distance between two points.
+   *
+   * @param lat1 Latitude first position.
+   * @param lon1 Longtitude first position.
+   * @param lat2 Latitude second position.
+   * @param lon2 Longtitude second position.
+   * @return d Returns the distance between the two points.
+   */
+  function computeDistance(lat1, lon1, lat2, lon2)
+  {
+      var earth_radius = 6371009;
+
+      var dLat = (lat2-lat1)*Math.PI/180;
+      var dLon = (lon2-lon1)*Math.PI/180;
+
+      var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLon/2) * Math.sin(dLon/2);
+
+      var c = 2 * Math.asin(Math.sqrt(a));
+
+      var d = earth_radius * c;
+
+      return d;
+  }
+
+  /**
+   * Checks if the distance is within given proximity.
+   *
+   * @param lat1 Latitude first position.
+   * @param lon1 Longtitude first position.
+   * @param lat2 Latitude second position.
+   * @param lon2 Longtitude second position.
+   * @param proximity The amount of meters the distance has to be lower as.
+   * @return boolean
+   */
+  function checkDistance(lat1, lon1, lat2, lon2, proximity)
+  {
+      var distance = computeDistance(lat1, lon1, lat2, lon2)
+
+      if (distance > proximity) {
+          return false;
+      } else {
+          return true;
+      }
+  }
+
+  getLocation();
+  </script>
+
 <header>
   <div id="logo">
     <img src="images/logo.png" alt="logo">
@@ -5,9 +93,9 @@
 </header>
 <div id="main-area">
   <img src="/images/dude.png" alt="boswachter-ruud">
-  <p>Welkom in Borgharen! Ik ben boswachter Ruud. Heb jij het in je om boswachter te worden?</p>
+  <p id="welkom"></p>
 
   <div id="main" class="button-wrap">
-      <button><a ng-href="#/menu"> BEGIN &#62;</a></button>
+      <button id="begin"><a ng-href="#/menu"> BEGIN &#62;</a></button>
   </div>
 </div>
