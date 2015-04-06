@@ -76,6 +76,46 @@ angular
         templateUrl: 'views/verhaal-8.html',
         controller: 'Verhaal8Ctrl'
       })
+      .when('/verhaal-9', {
+        templateUrl: 'views/verhaal-9.html',
+        controller: 'Verhaal9Ctrl'
+      })
+      .when('/verhaal-10', {
+        templateUrl: 'views/verhaal-10.html',
+        controller: 'Verhaal10Ctrl'
+      })
+      .when('/verhaal-11', {
+        templateUrl: 'views/verhaal-11.html',
+        controller: 'Verhaal11Ctrl'
+      })
+      .when('/verhaal-12', {
+        templateUrl: 'views/verhaal-12.html',
+        controller: 'Verhaal12Ctrl'
+      })
+      .when('/verhaal-13', {
+        templateUrl: 'views/verhaal-13.html',
+        controller: 'Verhaal13Ctrl'
+      })
+      .when('/verhaal-14', {
+        templateUrl: 'views/verhaal-14.html',
+        controller: 'Verhaal14Ctrl'
+      })
+      .when('/verhaal-15', {
+        templateUrl: 'views/verhaal-15.html',
+        controller: 'Verhaal15Ctrl'
+      })
+      .when('/verhaal-16', {
+        templateUrl: 'views/verhaal-16.html',
+        controller: 'Verhaal16Ctrl'
+      })
+      .when('/verhaal-17', {
+        templateUrl: 'views/verhaal-17.html',
+        controller: 'Verhaal17Ctrl'
+      })
+      .when('/verhaal-18', {
+        templateUrl: 'views/verhaal-18.html',
+        controller: 'Verhaal18Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

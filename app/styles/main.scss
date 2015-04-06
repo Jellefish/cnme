@@ -6,6 +6,8 @@
 @import 'component/chars';
 @import 'component/achtergronden';
 @import 'component/slidersteen';
+@import 'component/quiz';
+
 
                                                                 /* ========= MAIN ========= */
 
@@ -37,7 +39,7 @@ img {
 .container {
   width:100%;
   text-align:center;
-  overflow: hidden;
+  // overflow: hidden; SNIJD POPUPS AF
 }
 
 #main-area {
