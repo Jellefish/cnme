@@ -116,6 +116,10 @@ angular
         templateUrl: 'views/verhaal-18.html',
         controller: 'Verhaal18Ctrl'
       })
+      .when('/noandroid', {
+        templateUrl: 'views/noandroid.html',
+        controller: 'NoandroidCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
