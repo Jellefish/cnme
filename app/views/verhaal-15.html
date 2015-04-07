@@ -17,10 +17,10 @@
 <div id="popup1" class="popup">
   <span id="popup-content1" class="popup-content">
     <h1>Goed</h1>
-    <button class="buttoncenter">Volgende</button>
+    <a class="buttoncenter">Volgende</a>
   </span>
 </div>
-
+<img class="close" src="/images/close.png" alt="close">
 <div id="popup2" class="popup">
   <span id="popup-content2" class="popup-content">
     <h1>Fout</h1>
@@ -48,8 +48,17 @@ $('.goed').click(function() {
 $('.fout').click(function() {
   $('.popup-black').fadeIn(0);
   $('#popup2').fadeIn(0);
+  $('.close').fadeIn(0);
   $('#popup-content2').fadeIn(0);
   $('#quiz').fadeOut(0);
+});
+
+$('.close').click(function() {
+  $('.popup-black').fadeOut(0);
+  $('.popup').fadeOut(0);
+  $('.close').fadeOut(0);
+  $('.popup-content').fadeOut(0);
+  $('#quiz').fadeIn(0);
 });
 
   $('body').css('background','url(/images/achtergrond2.jpg) no-repeat');
