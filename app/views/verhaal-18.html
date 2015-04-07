@@ -10,21 +10,57 @@
      </div>
   </a>
 </header>
+
+<div class="popup-black">
+  </div>
+
+<div id="popup1" class="popup">
+  <span id="popup-content1" class="popup-content">
+    <h1>Goed</h1>
+    <a class="buttoncenter">Volgende</a>
+  </span>
+</div>
+<img class="close" src="/images/close.png" alt="close">
+<div id="popup2" class="popup">
+  <span id="popup-content2" class="popup-content">
+    <h1>Fout</h1>
+  </span>
+</div>
+
   <div id="quiz">
-    <p>Vraag 4: Blablabla</p>
+    <p>Vraag 1: Blablabla</p>
     <div>
-      <div class="optie"><label><input name="q1" type="radio" value="a" />Q1 A</label></div>
-      <div class="optie"><label><input name="q1" type="radio" value="b" />Q1 B</label></div>
-      <div class="optie"><label><input name="q1" type="radio" value="c" />Q1 C</label></div>
-      <div class="optie"><label><input name="q1" type="radio" value="c" />Q1 C</label></div>
-      <input class="buttonquiz" type="button" value="Antwoord">&nbsp;<span id="ans1" class="chkans"></span>
+      <a class="goed button optie">Antwoord a</a>
+      <a class="fout button optie">Antwoord b</a>
+      <a class="fout button optie">Antwoord c</a>
+      <a class="fout button optie">Antwoord d</a>
     </div>
   </div>
 
 <script>
+$('.goed').click(function() {
+  $('.popup-black').fadeIn(0);
+  $('#popup1').fadeIn(0);
+  $('#popup-content1').fadeIn(0);
+  $('#quiz').fadeOut(0);
+});
+
+$('.fout').click(function() {
+  $('.popup-black').fadeIn(0);
+  $('#popup2').fadeIn(0);
+  $('.close').fadeIn(0);
+  $('#popup-content2').fadeIn(0);
+  $('#quiz').fadeOut(0);
+});
+
+$('.close').click(function() {
+  $('.popup-black').fadeOut(0);
+  $('.popup').fadeOut(0);
+  $('.close').fadeOut(0);
+  $('.popup-content').fadeOut(0);
+  $('#quiz').fadeIn(0);
+});
+
   $('body').css('background','url(/images/achtergrond2.jpg) no-repeat');
   $('body').css('background-size','cover');
-</script>
-<script>
-  
 </script>
