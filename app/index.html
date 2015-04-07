@@ -23,9 +23,44 @@
 
     <!-- Add your site or application content here -->
 
+    <div class="rotate-screen">
+        <img src="images/rotate.png" alt="rotating-arrows">
+        <p>Draai je scherm om te app te gebruiken!</p>
+    </div>
+
     <div class="container">
     <div ng-view=""></div>
     </div>
+
+    <script>
+        var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+
+    };
+
+
+
+if (! isMobile.Android() ) {
+        document.location.href = "#/noandroid";
+    }
+    </script>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -80,6 +115,7 @@
         <script src="scripts/controllers/verhaal-18.js"></script>
         <script src="scripts/controllers/verhaal-19.js"></script>
         <script src="scripts/controllers/verhaal-20.js"></script>
+        <script src="scripts/controllers/noandroid.js"></script>
         <!-- endbuild -->
 </body>
 </html>
