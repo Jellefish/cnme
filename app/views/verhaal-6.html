@@ -1,0 +1,110 @@
+                                                                <!-- OPDRACHT 1 -->
+<header>
+  <a ng-href="#/menu">
+    <div id="hamburger">
+      <div></div>
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
+  </a>
+  <a id="steen">
+    <div>
+      <img src="/images/steen-08.png" alt="steen">
+    </div>
+  </a>
+
+</header>
+    <img class="close" src="/images/close.png" alt="close">
+<div id="main-area">
+  <div class="popup-black">
+    </div>
+    <div class="popup">
+      <span class="popup-content" id="popup1">
+        <h1>Stenen</h1>
+
+          <section style="width:100%;" id="slider">
+            <button class="button" style="width:30px;right:5px;left:inherit;top:150px;" id="slidernext">&#62;</button>
+            <button class="button" style="width:30px;left:5px;right:inherit;top:150px;" id="sliderprev">&#60;</button>
+            <div class="containerslider">
+              <div style="display: inline-block;">
+                <img src="/images/kwartsiet-met-kwartsbanden.png"/>
+                <h2> Kwartsiet met kwartsbanden </h2>
+                <p id="kwartsiet">Kwartsiet is ontstaan uit zandkorrels onder hoge druk, tijdens gebergtevorming. Vaak werd het gesteente dan door breuken gespleten. De spleten werden opgevuld door witte kwarts-kristallen. Als oude spleten vol verschuiven die witte strepen dan verschoven ten opzichte van elkaar.</p>
+              </div>
+              <div>
+               <img src="/images/leisteen.png"/>
+                <h2> Leisteen </h2>
+                <p id="leisteen">Een platte, donder-grijze steen, die uit veel dunne laagjes bestaat. Dat kun je goed zien. Je kunt deze steen ook weer in dunne laagjes splijten. De steen is ontstaan uit op elkaar geperste kleilaagjes. Soms vind je glimmende stukjes. Leisteen komt uit de Ardennen. Ze worden gebruikt als dakbedekking, en als mini-schoolbord (lei en griffel).</p>
+              </div>
+              <div>
+                <img src="/images/revinienkwartsiet.png"/>
+                <h2> Revinienkwartsiet </h2>
+                <p id="revinienkwartsiet">Deze kwartsiet is donker blauw-grijs. Met het blote oog zie je vierkante puntjes zitten. Daarin zaten ooit goudkleurige, vierkante steentjes (Pyriet), die nu allang vergaan zijn. Deze steen komt uit de Ardennen. Als je de steen spijt, kun je de goudkleurige steentjes tegenkomen. Maar splijten is niet aan te raden, vanwege het gevaar van rondvliegende splinters!</p>
+              </div>
+            </div>
+          </section>
+      </span>
+    </div>
+    <div id="textballon-links">
+      <p> Ik zoek een <span>Vuursteen</span>, <span>Rotssteen</span> en <span>Zeesteen</span>. Klik op de steen rechtsboven om een stenenoverzicht te bekijken. Klik op 'Neem Foto' om een foto te nemen.</p>
+    </div>
+    <img id="worm" class="char-left" src="/images/worm-07.png" alt="boswachter-ruud">
+</div>
+
+<div id="footer">
+  <div class="button-wrap">
+      <a class="button" ng-href="#/verhaal-5">&#60; VORIGE</a>
+      <a class="button" ng-href="#/verhaal-7">NEEM FOTO &#62;</a>
+  </div>
+</div>
+
+<script>
+
+$('#steen').click(function() {
+  $('.popup-black').fadeIn(0);
+  $('.popup').fadeIn(0);
+  $('.close').fadeIn(0);
+  $('.popup-content').fadeIn(0);
+  $('#textballon-links').fadeOut(0);
+});
+
+$('.close').click(function() {
+  $('.popup-black').fadeOut(0);
+  $('.popup').fadeOut(0);
+  $('.close').fadeOut(0);
+  $('.popup-content').fadeOut(0);
+  $('#textballon-links').fadeIn(0);
+});
+
+  $('body').css('background','url(/images/achtergrond1.jpg) no-repeat');
+  $('body').css('background-size','cover');
+
+
+var currentIndex = 0,
+  items = $('.containerslider div'),
+  itemAmt = items.length;
+
+function cycleItems() {
+  var item = $('.containerslider div').eq(currentIndex);
+  items.hide();
+  item.css('display','inline-block');
+}
+
+$('#slidernext').click(function() {
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+});
+
+$('#sliderprev').click(function() {
+  currentIndex -= 1;
+  if (currentIndex < 0) {
+    currentIndex = itemAmt - 1;
+  }
+  cycleItems();
+});
+
+</script>

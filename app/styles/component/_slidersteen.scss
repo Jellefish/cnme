@@ -1,0 +1,63 @@
+.containerslider {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.containerslider div {
+  width: 80%;
+  display: inline-block;
+  display: none;
+  margin-top: -30px;
+}
+
+.containerslider div h2{
+  color: #666666;
+  font-size: 18px !important;
+  width: 100%;
+  overflow:auto;
+  max-height: 130px;
+  margin:0;
+}
+
+.containerslider div p{
+  color: #7f8c8d;
+  font-size: 16px !important;
+  margin: 10px auto !important;
+  line-height: 15px;
+  width: 100%;
+  overflow:auto;
+  max-height: 130px;
+}
+
+#kwartsiet {
+  max-height:110px !important;
+}
+
+#leisteen {
+  max-height:150px;
+}
+
+#revinienkwartsiet {
+  max-height:170px;
+}
+
+.containerslider img {
+  width: 135px !important;
+}
+
+#slider button {
+  position: absolute;
+}
+
+#slidernext {
+  right: 0;
+  z-index:100;
+}
+
+#sliderprev {
+  left: 0;
+  z-index:100;
+}
+

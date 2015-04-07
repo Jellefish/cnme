@@ -1,0 +1,36 @@
+#textballon-links,#textballon-rechts {
+  position: absolute;
+  min-height: 0px;
+  max-height: 250px;
+  background-color: #ffffff;
+  width: 200px;
+  border-radius: 10px;
+  overflow-y:auto;
+  z-index:1;
+}
+
+#textballon-links {
+  float: left;
+  margin-top: 200px;
+  margin-left: 30px;
+  box-shadow: -5px 5px #7f8c8d;
+}
+
+#textballon-rechts {
+  float: right;
+  margin-top: 200px;
+  right: 30px;
+  box-shadow: 5px 5px #7f8c8d;
+}
+
+#textballon-links p,#textballon-rechts p {
+  color: #7f8c8d;
+  text-align: left;
+  font-size: 16px !important;
+  margin:10px auto !important;
+  line-height: 15px;
+}
+
+#textballon-links p span,#textballon-rechts p span{
+  color: #31BA8E;
+}
