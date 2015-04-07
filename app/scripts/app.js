@@ -123,6 +123,7 @@ angular
       .when('/verhaal-20', {
         templateUrl: 'views/verhaal-20.html',
         controller: 'Verhaal20Ctrl'
+      })
       .when('/noandroid', {
         templateUrl: 'views/noandroid.html',
         controller: 'NoandroidCtrl'
