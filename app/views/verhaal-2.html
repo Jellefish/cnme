@@ -1,13 +1,11 @@
                                                                 <!-- VERHAAL -->
 <header>
-  <a ng-href="#/menu">
-    <div id="hamburger">
+    <button id="hamburger">
       <div></div>
         <span></span>
         <span></span>
         <span></span>
-     </div>
-  </a>
+     </button>
 </header>
 <div id="main-area">
     <div id="textballon-links">
@@ -26,4 +24,8 @@
 <script>
   $('body').css('background','url(/images/achtergrond.jpg) no-repeat');
   $('body').css('background-size','cover');
+
+  document.getElementById("hamburger").addEventListener("click", function(){
+    document.getElementById("menu").classList.add("js-droptop");
+  });
 </script>

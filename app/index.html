@@ -56,7 +56,7 @@
     };
 
 
-
+/*
 if (! isMobile.Android() ) {
         document.location.href = "#/noandroid";
 };
@@ -67,7 +67,7 @@ if (screen.width > 479) {
 
 if (screen.width < 319) {
     document.location.href = "#/noandroid";
-};
+};*/
 
     </script>
 
@@ -126,5 +126,67 @@ if (screen.width < 319) {
         <script src="scripts/controllers/noandroid.js"></script>
         <script src="scripts/controllers/diploma.js"></script>
         <!-- endbuild -->
+<div id="menu" class="overlay">
+  <div class="menu">
+    <header>
+      <div id="logo">
+        <img src="images/logo.png" alt="logo">
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <a ng-href="#/verhaal"><li class="menu-item" id="menu-left1">Verhaal<img src="/images/boswachter-01.png" alt="boswachter-ruud"></li></a>
+        <li class="menu-item" id="menu-right1">Score<img src="/images/flat-trophy.png" alt="trophy"></li>
+        <li class="menu-item" id="menu-left2">Voortgang<img src="/images/kaart-03.png" alt="map"></li>
+        <li class="menu-item" id="menu-right2">Informatie<img src="/images/boek-02.png" alt="book"></li>
+      </ul>
+    </nav>
+    <a ng-href="#/main" id="terug">
+      &#60; Terug naar beginscherm
+    </a>
+    <div class="popup-black">
+    </div>
+    <img class="close" src="/images/close.png" alt="close">
+    <div class="popup">
+      <span class="popup-content" id="popup1">
+        <h1>Score</h1>
+        <span id="huidige-score">
+          Huidige score
+        </span>
+        <span id="huidige-score-resultaat">
+          0 punten
+        </span>
+        <img id="trophy" src="/images/flatTrophy.png" alt="flat-trophy">
+      </span>
+      <span class="popup-content" id="popup2">
+        <h1>Voortgang</h1>
+        <span id="voortgang-resultaat">
+          50%
+        </span>
+        <img id="voortgang" src="/images/voortgang.png" alt="voortgang">
+      </span>
+      <span class="popup-content" id="popup3">
+        <h1>Informatie</h1>
+        <button class="button" id="cnme-info">
+          CNME
+        </button>
+        <p class="popup-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+        <button class="button" id="app-info">
+          Over app
+        </button>
+        <p class="popup-info2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+      </span>
+    </div>
+  </div>
+</div>
+<script>
+
+document.getElementById("terug").setAttribute("ng-href", window.location.href)
+
+document.getElementById("menu-left1").addEventListener("click", function(){
+  document.getElementById("menu").classList.remove("js-droptop");
+});
+
+</script>
 </body>
 </html>
