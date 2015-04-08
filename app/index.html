@@ -25,7 +25,7 @@
 
     <div class="rotate-screen">
         <img src="images/rotate.png" alt="rotating-arrows">
-        <p>Draai je scherm om te app te gebruiken!</p>
+        <p>Draai je scherm om de app te gebruiken!</p>
     </div>
 
     <div class="container">
@@ -59,7 +59,11 @@
 
 if (! isMobile.Android() ) {
         document.location.href = "#/noandroid";
-    }
+};
+
+if (screen.width > 479 || screen.width < 319) {
+    document.location.href = "#/noandroid";
+};
     </script>
 
 

@@ -29,6 +29,12 @@ html,body {
 }
 }
 
+@media only screen and (max-width:319px) {
+#noandroid-ruud {
+  display:none;
+}
+}
+
 @media only screen and (orientation: portrait) {
 
 @import 'base/normalize';
@@ -45,6 +51,10 @@ html,body {
                                                                 /* ========= MAIN ========= */
 
 .rotate-screen {
+  display:none;
+}
+
+.no-smartphone {
   display:none;
 }
 
@@ -103,6 +113,7 @@ img {
   right:0;
   margin:0 auto;
   bottom:-85px;
+  max-width:300px;
 }
 
 
