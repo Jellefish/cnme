@@ -29,6 +29,30 @@ html,body {
 }
 }
 
+@media only screen and (orientation: landscape) and (min-device-width:768px) {
+
+@import 'base/normalize';
+@import 'base/typography';
+
+html,body {
+  height:100vh;
+  overflow-y:hidden;
+  width:100vw;
+  text-align:center;
+  font-family: Londrina;
+  color:#fff;
+  background: center/cover url(/images/bg.jpg) no-repeat fixed;
+}
+.rotate-screen {
+  display:none;
+}
+
+.container {
+  display:block;
+}
+
+}
+
 @media only screen and (max-width:319px) {
 #noandroid-ruud {
   display:none;

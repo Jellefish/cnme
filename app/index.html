@@ -61,9 +61,14 @@ if (! isMobile.Android() ) {
         document.location.href = "#/noandroid";
 };
 
-if (screen.width > 479 || screen.width < 319) {
+if (screen.width > 479) {
     document.location.href = "#/noandroid";
 };
+
+if (screen.width < 319) {
+    document.location.href = "#/noandroid";
+};
+
     </script>
 
 
