@@ -178,15 +178,6 @@ nav ul li {
   transition: top 0.8s ease-in-out;
 }
 
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
 
 
 .overlay {
