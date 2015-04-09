@@ -124,10 +124,6 @@ angular
         templateUrl: 'views/verhaal-20.html',
         controller: 'Verhaal20Ctrl'
       })
-      .when('/noandroid', {
-        templateUrl: 'views/noandroid.html',
-        controller: 'NoandroidCtrl'
-      })
       .when('/diploma', {
         templateUrl: 'views/diploma.html',
         controller: 'DiplomaCtrl'
