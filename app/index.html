@@ -28,7 +28,7 @@
         <p>Draai je scherm om de app te gebruiken!</p>
     </div>
 
-    <div class="container">
+    <div class="container" ng-controller="MasterController">
     <div ng-view=""></div>
     </div>
 
@@ -56,7 +56,7 @@
     };
 
 
-
+/*
 if (! isMobile.Android() ) {
         document.location.href = "#/noandroid";
 };
@@ -68,7 +68,7 @@ if (screen.width > 479) {
 if (screen.width < 319) {
     document.location.href = "#/noandroid";
 };
-
+*/
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -126,16 +126,16 @@ if (screen.width < 319) {
         <script src="scripts/controllers/noandroid.js"></script>
         <script src="scripts/controllers/diploma.js"></script>
         <!-- endbuild -->
-<div id="menu" class="overlay">
+<div id="menu" class="overlay" ng-controller="MasterController">
   <div class="menu">
     <header>
       <div id="logo">
         <img src="images/logo.png" alt="logo">
       </div>
-    </header>
+  </header>
     <nav>
       <ul>
-        <a ng-href="#/verhaal"><li class="menu-item" id="menu-left1">Verhaal<img src="/images/boswachter-01.png" alt="boswachter-ruud"></li></a>
+        <a href="" ng-click="menuClose()"><li class="menu-item" id="menu-left1">Verhaal<img src="/images/boswachter-01.png" alt="boswachter-ruud"></li></a>
         <li class="menu-item" id="menu-right1">Score<img src="/images/flat-trophy.png" alt="trophy"></li>
         <li class="menu-item" id="menu-left2">Voortgang<img src="/images/kaart-03.png" alt="map"></li>
         <li class="menu-item" id="menu-right2">Informatie<img src="/images/boek-02.png" alt="book"></li>
@@ -181,10 +181,11 @@ if (screen.width < 319) {
 </div>
 <script>
 
+/*
 document.getElementById("menu-left1").addEventListener("click", function(){
   document.getElementById("menu").classList.remove("js-droptop");
 });
-
+*/
 </script>
 </body>
 </html>

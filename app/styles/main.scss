@@ -175,7 +175,7 @@ nav ul li {
 
 .overlay.js-droptop {
   top: 0;
-  transition: top 0.8s ease-in-out;
+  transition: top 0.4s ease-in-out;
 }
 
 
@@ -189,6 +189,7 @@ nav ul li {
   background: url(/images/bg.jpg) no-repeat;
   background-size: cover;
   z-index: 1000;
+  transition: top .6s ease-in-out;
 }
 
 .menu {
@@ -442,6 +443,11 @@ nav ul li {
   padding: 10px;
   background-color: #ffffff;
   border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  box-shadow: none;
+  border: none;
 }
 
 #cameraInput {

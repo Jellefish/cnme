@@ -136,3 +136,17 @@ angular
         redirectTo: '/'
       });
   });
+
+var myApp = angular.module('cnmeApp');
+
+myApp.controller('MasterController', ['$scope', '$animate', function($scope, $animate){
+
+  $scope.menuOpen = function() {
+    $animate.addClass('#menu', 'js-droptop');
+  };
+
+  $scope.menuClose = function() {
+    $animate.removeClass('#menu', 'js-droptop');
+  };
+
+}]);
