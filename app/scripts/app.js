@@ -141,6 +141,8 @@ var myApp = angular.module('cnmeApp');
 
 myApp.controller('MasterController', ['$scope', '$animate', function($scope, $animate){
 
+  $scope.score = null;
+
   $scope.menuOpen = function() {
     $animate.addClass('#menu', 'js-droptop');
   };
@@ -157,8 +159,12 @@ myApp.controller('MasterController', ['$scope', '$animate', function($scope, $an
     $animate.removeClass(selector, jsclass);
   };
 
-}]);
+  $scope.scoreSet = function() {
 
-myApp.factory('score', function() {
-  
-});
+  };
+
+  $scope.scoreGet = function() {
+
+  };
+
+}]);
