@@ -184,6 +184,38 @@ if (screen.width < 319) {
   </div>
 </div>
 <script>
+$('.menu-item').click(function() {
+  $('.popup-black').fadeIn(0);
+  $('.popup').fadeIn(0);
+  $('.close').fadeIn(0);
+});
+
+$('.close').click(function() {
+  $('.popup-black').fadeOut(0);
+  $('.popup').fadeOut(0);
+  $('.close').fadeOut(0);
+  $('.popup-content').fadeOut(0);
+});
+
+$('#menu-right1').click(function() {
+  $('#popup1').fadeIn(0);
+});
+$('#menu-left2').click(function() {
+  $('#popup2').fadeIn(0);
+});
+$('#menu-right2').click(function() {
+  $('#popup3').fadeIn(0);
+});
+
+$('#cnme-info').click(function() {
+  $('.popup-info').slideToggle();
+  $('.popup-info2').slideUp();
+});
+
+$('#app-info').click(function() {
+  $('.popup-info2').slideToggle();
+  $('.popup-info').slideUp();
+});
 
 /*
 document.getElementById("menu-left1").addEventListener("click", function(){
