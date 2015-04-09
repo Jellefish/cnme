@@ -139,10 +139,17 @@ if (screen.width < 319) {
   </header>
     <nav>
       <ul>
+<<<<<<< HEAD
         <a ng-click="menuClose()"><li style="margin-right:2%;padding-top:25px;"><img src="/images/1-10.svg" alt="boswachter-ruud"></li></a>
         <li ng-click="openPopup()" style="padding-top:25px;"><img src="/images/2-11.svg" alt="trophy"></li>
         <li style="margin-right:2%"><img src="/images/3-12.svg" alt="map"></li>
         <li><img src="/images/4-13.svg" alt="book"></li>
+=======
+        <a ng-click="menuClose()"><li style="margin-right:2%;padding-top:25px;"><img src="/images/1-10-1.svg" alt="boswachter-ruud"></li></a>
+        <li id="menu-right1" class="menu-item" style="padding-top:25px;"><img src="/images/2-11-1.svg" alt="trophy"></li>
+        <li id="menu-left2" class="menu-item" style="margin-right:2%"><img src="/images/3-12-1.svg" alt="map"></li>
+        <li id="menu-right2" class="menu-item"><img src="/images/4-13-1.svg" alt="book"></li>
+>>>>>>> d78cc1ef6d4984c76a5beb409e5ce4d8e83fbeb5
       </ul>
     </nav>
     <a ng-href="#/main" id="terug">
@@ -184,6 +191,38 @@ if (screen.width < 319) {
   </div>
 </div>
 <script>
+$('.menu-item').click(function() {
+  $('.popup-black').fadeIn(0);
+  $('.popup').fadeIn(0);
+  $('.close').fadeIn(0);
+});
+
+$('.close').click(function() {
+  $('.popup-black').fadeOut(0);
+  $('.popup').fadeOut(0);
+  $('.close').fadeOut(0);
+  $('.popup-content').fadeOut(0);
+});
+
+$('#menu-right1').click(function() {
+  $('#popup1').fadeIn(0);
+});
+$('#menu-left2').click(function() {
+  $('#popup2').fadeIn(0);
+});
+$('#menu-right2').click(function() {
+  $('#popup3').fadeIn(0);
+});
+
+$('#cnme-info').click(function() {
+  $('.popup-info').slideToggle();
+  $('.popup-info2').slideUp();
+});
+
+$('#app-info').click(function() {
+  $('.popup-info2').slideToggle();
+  $('.popup-info').slideUp();
+});
 
 /*
 document.getElementById("menu-left1").addEventListener("click", function(){
