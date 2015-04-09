@@ -141,7 +141,7 @@ var myApp = angular.module('cnmeApp');
 
 myApp.controller('MasterController', ['$scope', '$animate', function($scope, $animate){
 
-  $scope.score = null;
+  $scope.score = 0;
 
   $scope.menuOpen = function() {
     $animate.addClass('#menu', 'js-droptop');
@@ -159,12 +159,14 @@ myApp.controller('MasterController', ['$scope', '$animate', function($scope, $an
     $animate.removeClass(selector, jsclass);
   };
 
-  $scope.scoreSet = function() {
-
+  $scope.scoreSet = function(score) {
+    if (score > localStorage.getItem('score')) {
+      localStorage.setItem('score', score);
+    }
   };
 
-  $scope.scoreGet = function() {
-
-  };
+  $scope.$watch('scoreSet', function() {
+    $scope.score = localStorage.getItem('score');
+  });
 
 }]);
