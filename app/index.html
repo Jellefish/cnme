@@ -69,6 +69,7 @@ if (screen.width < 319) {
     document.location.href = "#/noandroid";
 };
 */
+
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -126,7 +127,10 @@ if (screen.width < 319) {
         <script src="scripts/controllers/noandroid.js"></script>
         <script src="scripts/controllers/diploma.js"></script>
         <!-- endbuild -->
+
 <div id="menu" class="overlay" ng-controller="MasterController">
+<div class="full-height-background">
+</div>
   <div class="menu">
     <header>
       <div id="logo">
@@ -135,10 +139,10 @@ if (screen.width < 319) {
   </header>
     <nav>
       <ul>
-        <a href="" ng-click="menuClose()"><li class="menu-item" id="menu-left1">Verhaal<img src="/images/boswachter-01.png" alt="boswachter-ruud"></li></a>
-        <li class="menu-item" id="menu-right1">Score<img src="/images/flat-trophy.png" alt="trophy"></li>
-        <li class="menu-item" id="menu-left2">Voortgang<img src="/images/kaart-03.png" alt="map"></li>
-        <li class="menu-item" id="menu-right2">Informatie<img src="/images/boek-02.png" alt="book"></li>
+        <a ng-href="#/verhaal"><li style="margin-right:2%;padding-top:25px;"><img src="/images/1-10.svg" alt="boswachter-ruud"></li></a>
+        <li style="padding-top:25px;"><img src="/images/2-11.svg" alt="trophy"></li>
+        <li style="margin-right:2%"><img src="/images/3-12.svg" alt="map"></li>
+        <li><img src="/images/4-13.svg" alt="book"></li>
       </ul>
     </nav>
     <a ng-href="#/main" id="terug">
