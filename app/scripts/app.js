@@ -153,8 +153,12 @@ myApp.controller('MasterController', ['$scope', '$animate', function($scope, $an
     $animate.addClass(selector, jsclass);
   };
 
-  $scope.openPopup = function(selector, jsclass) {
+  $scope.closePopup = function(selector, jsclass) {
     $animate.removeClass(selector, jsclass);
   };
 
 }]);
+
+myApp.factory('score', function() {
+  
+});
