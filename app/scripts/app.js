@@ -149,4 +149,12 @@ myApp.controller('MasterController', ['$scope', '$animate', function($scope, $an
     $animate.removeClass('#menu', 'js-droptop');
   };
 
+  $scope.openPopup = function(selector, jsclass) {
+    $animate.addClass(selector, jsclass);
+  };
+
+  $scope.openPopup = function(selector, jsclass) {
+    $animate.removeClass(selector, jsclass);
+  };
+
 }]);
