@@ -128,6 +128,26 @@ angular
         templateUrl: 'views/diploma.html',
         controller: 'DiplomaCtrl'
       })
+      .when('/verhaal-21', {
+        templateUrl: 'views/verhaal-21.html',
+        controller: 'Verhaal21Ctrl'
+      })
+      .when('/verhaal-22', {
+        templateUrl: 'views/verhaal-22.html',
+        controller: 'Verhaal22Ctrl'
+      })
+      .when('/verhaal-23', {
+        templateUrl: 'views/verhaal-23.html',
+        controller: 'Verhaal23Ctrl'
+      })
+      .when('/verhaal-24', {
+        templateUrl: 'views/verhaal-24.html',
+        controller: 'Verhaal24Ctrl'
+      })
+      .when('/verhaal-25', {
+        templateUrl: 'views/verhaal-25.html',
+        controller: 'Verhaal25Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
