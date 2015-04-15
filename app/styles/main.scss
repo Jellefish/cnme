@@ -240,7 +240,7 @@ svg {
   top:0;
   opacity: 0;
   z-index:-1666;
-  transition: opacity 0.4s, z-index 0.8s;
+  transition: opacity 0.4s linear, z-index 0.4s step-start;
 }
 
 .popup {
@@ -266,18 +266,18 @@ svg {
   background-color:#31BA8E;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  top:-86px;
-  position:relative;
+  top:-21px;
+  position:absolute;
   padding-top:15px;
 }
 
 .close {
   position:relative;
   top: -100px;
-  width:60px;
+  width:60px !important;
   left:0;
   right:0;
-  margin:0 auto;
+  margin:0 auto !important;
   cursor:pointer;
 }
 

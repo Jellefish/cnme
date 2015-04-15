@@ -9,19 +9,16 @@
    </button>
 </header>
 
-<div class="popup-black">
-  </div>
-
-<div id="popup1" class="popup">
+<div id="popup-goed" class="popup">
   <span id="popup-content1" class="popup-content">
     <h1>Goed</h1>
     <span class="voltooide-vraag">Je hebt de vraag goed beantwoord! Tik op volgende om door te gaan.</span>
-    <a ng-href="#/verhaal-18" class="button popup-button">Volgende</a>
+    <a ng-href="#/verhaal-18" class="button popup-button" ng-click="closePopup('#popup-overlay', 'jsfadein', '#popup-goed', 'jspopupdrop')">Volgende</a>
     <img id="trophy" src="/images/balloons.png" alt="flat-trophy">
   </span>
 </div>
-<img class="close" src="/images/close.png" alt="close">
-<div id="popup2" class="popup">
+<div id="popup-fout" class="popup">
+  <img class="close" src="/images/close.png" alt="close" ng-click="closePopup('#popup-overlay', 'jsfadein', '#popup-fout', 'jspopupdrop')">
   <span id="popup-content2" class="popup-content">
     <h1>Fout</h1>
   </span>
@@ -30,10 +27,10 @@
   <div id="quiz">
     <p>Vraag 3: Waar komen de Galloway koeien vandaan?</p>
     <div>
-      <a class="fout button optie">Nederland</a>
-      <a class="goed button optie">Schotland</a>
-      <a class="fout button optie">Spanje</a>
-      <a class="fout button optie">Engeland</a>
+      <a ng-click="openPopup('#popup-overlay','jsfadein','#popup-fout','jspopupdrop')" class="fout button optie">Nederland</a>
+      <a ng-click="openPopup('#popup-overlay','jsfadein','#popup-goed','jspopupdrop')" class="goed button optie">Schotland</a>
+      <a ng-click="openPopup('#popup-overlay','jsfadein','#popup-fout','jspopupdrop')" class="fout button optie">Spanje</a>
+      <a ng-click="openPopup('#popup-overlay','jsfadein','#popup-fout','jspopupdrop')" class="fout button optie">Engeland</a>
     </div>
   </div>
 
