@@ -152,6 +152,22 @@ angular
         templateUrl: 'views/verhaal-26.html',
         controller: 'Verhaal26Ctrl'
       })
+      .when('/verhaal-27', {
+        templateUrl: 'views/verhaal-27.html',
+        controller: 'Verhaal27Ctrl'
+      })
+      .when('/verhaal-28', {
+        templateUrl: 'views/verhaal-28.html',
+        controller: 'Verhaal28Ctrl'
+      })
+      .when('/verhaal-29', {
+        templateUrl: 'views/verhaal-29.html',
+        controller: 'Verhaal29Ctrl'
+      })
+      .when('/verhaal-30', {
+        templateUrl: 'views/verhaal-30.html',
+        controller: 'Verhaal30Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
