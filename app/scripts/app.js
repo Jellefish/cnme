@@ -170,3 +170,37 @@ myApp.controller('MasterController', ['$scope', '$animate', function($scope, $an
   });
 
 }]);
+
+/*
+myApp.factory('ScoreFactory', function() {
+
+  var currentScore;
+
+  if(!localStorage.getItem('score')){
+    localStorage.setItem('score', 0)
+  }
+  return {
+    getScore: function(){
+      return currentScore = parseInt(localStorage.getItem('score'));
+    },
+    setScore: function(incr){
+      var cur = parseInt(localStorage.getItem('score'));
+      cur += incr;
+      localStorage.setItem('score', cur);
+    }
+  }
+});
+
+(function(){
+
+  myApp.controller('ScoreCtrl', ['$scope', '$http', 'ScoreFactory', function($scope, $http, ScoreFactory) {
+
+    $scope.upScore = function(inc){
+      ScoreFactory.setScore(inc);
+      $scope.score = ScoreFactory.getScore();
+    }
+
+    $scope.score = ScoreFactory.getScore();
+  }])
+
+})()*/
