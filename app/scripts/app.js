@@ -168,6 +168,26 @@ angular
         templateUrl: 'views/verhaal-30.html',
         controller: 'Verhaal30Ctrl'
       })
+      .when('/verhaal-31', {
+        templateUrl: 'views/verhaal-31.html',
+        controller: 'Verhaal31Ctrl'
+      })
+      .when('/verhaal-32', {
+        templateUrl: 'views/verhaal-32.html',
+        controller: 'Verhaal32Ctrl'
+      })
+      .when('/verhaal-34', {
+        templateUrl: 'views/verhaal-34.html',
+        controller: 'Verhaal34Ctrl'
+      })
+      .when('/verhaal-33', {
+        templateUrl: 'views/verhaal-33.html',
+        controller: 'Verhaal33Ctrl'
+      })
+      .when('/verhaal-35', {
+        templateUrl: 'views/verhaal-35.html',
+        controller: 'Verhaal35Ctrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
