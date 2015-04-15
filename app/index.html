@@ -30,6 +30,68 @@
 
     <div class="container" ng-controller="MasterController">
     <div ng-view=""></div>
+    <div id="menu" class="overlay">
+    <div class="full-height-background">
+    </div>
+      <div class="menu">
+        <header>
+          <div id="logo">
+            <img src="images/logo.png" alt="logo">
+          </div>
+      </header>
+        <nav>
+          <ul>
+            <a ng-click="menuClose()"><li style="margin-right:2%;padding-top:25px;"><img src="/images/1-10-1.svg" alt="boswachter-ruud"></li></a>
+            <li ng-click="openPopup('#popup-overlay', 'jsfadein', '#popup1-content', 'jspopupdrop')" id="menu-right1" class="menu-item" style="padding-top:25px;"><img src="/images/2-11-1.svg" alt="trophy"></li>
+            <li ng-click="openPopup('#popup-overlay', 'jsfadein', '#popup2-content', 'jspopupdrop')" id="menu-left2" class="menu-item" style="margin-right:2%"><img src="/images/3-12-1.svg" alt="map"></li>
+            <li ng-click="openPopup('#popup-overlay', 'jsfadein', '#popup3-content', 'jspopupdrop')" id="menu-right2" class="menu-item"><img src="/images/4-13-1.svg" alt="book"></li>
+          </ul>
+        </nav>
+        <a ng-href="#/main" id="terug" ng-click="menuClose()">
+          &#60; Terug naar beginscherm
+        </a>
+      </div>
+    </div>
+    <div class="popup-black" id="popup-overlay">
+    </div>
+    <div class="popup" id="popup1-content">
+      <img class="close" src="/images/close.png" alt="close" ng-click="closePopup('#popup-overlay', 'jsfadein', '#popup1-content', 'jspopupdrop')">
+      <span class="popup-content">
+        <h1>Score</h1>
+        <span id="huidige-score">
+          Huidige score
+        </span>
+        <span id="huidige-score-resultaat" ng-model="score">
+          {{score}} punten
+        </span>
+        <img id="trophy" src="/images/flatTrophy.png" alt="flat-trophy">
+      </span>
+    </div>
+      <div class="popup" id="popup2-content">
+        <img class="close" src="/images/close.png" alt="close" ng-click="closePopup('#popup-overlay', 'jsfadein', '#popup2-content', 'jspopupdrop')">
+        <span class="popup-content">
+          <h1>Voortgang</h1>
+          <span id="voortgang-resultaat">
+            50%
+          </span>
+          <img id="voortgang" src="/images/voortgang50-15.png" alt="voortgang">
+        </span>
+      </div>
+      <div class="popup" id="popup3-content">
+        <img class="close" src="/images/close.png" alt="close" ng-click="closePopup('#popup-overlay', 'jsfadein', '#popup3-content', 'jspopupdrop')">
+        <span class="popup-content">
+          <h1>Informatie</h1>
+          <button class="button" id="cnme-info">
+            CNME
+          </button>
+          <p class="popup-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+          <button class="button" id="app-info">
+            Over app
+          </button>
+          <p class="popup-info2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+        </span>
+      </div>
+
     </div>
 
     <script>
@@ -126,86 +188,7 @@ if (screen.width < 319) {
         <script src="scripts/controllers/noandroid.js"></script>
         <script src="scripts/controllers/diploma.js"></script>
         <!-- endbuild -->
-
-<div id="menu" class="overlay" ng-controller="MasterController">
-<div class="full-height-background">
-</div>
-  <div class="menu">
-    <header>
-      <div id="logo">
-        <img src="images/logo.png" alt="logo">
-      </div>
-  </header>
-    <nav>
-      <ul>
-        <a ng-click="menuClose()"><li style="margin-right:2%;padding-top:25px;"><img src="/images/1-10-1.svg" alt="boswachter-ruud"></li></a>
-        <li id="menu-right1" class="menu-item" style="padding-top:25px;"><img src="/images/2-11-1.svg" alt="trophy"></li>
-        <li id="menu-left2" class="menu-item" style="margin-right:2%"><img src="/images/3-12-1.svg" alt="map"></li>
-        <li id="menu-right2" class="menu-item"><img src="/images/4-13-1.svg" alt="book"></li>
-      </ul>
-    </nav>
-    <a ng-href="#/main" id="terug" ng-click="menuClose()">
-      &#60; Terug naar beginscherm
-    </a>
-    <div class="popup-black">
-    </div>
-    <img class="close" src="/images/close.png" alt="close">
-    <div class="popup">
-      <span class="popup-content" id="popup1">
-        <h1>Score</h1>
-        <span id="huidige-score">
-          Huidige score
-        </span>
-        <span id="huidige-score-resultaat" ng-model="score">
-          0 punten
-        </span>
-        <img id="trophy" src="/images/flatTrophy.png" alt="flat-trophy">
-      </span>
-      <span class="popup-content" id="popup2">
-        <h1>Voortgang</h1>
-        <span id="voortgang-resultaat">
-          0%
-        </span>
-        <img id="voortgang" src="/images/voortgang0-02.png" alt="voortgang">
-      </span>
-      <span class="popup-content" id="popup3">
-        <h1>Informatie</h1>
-        <button class="button" id="cnme-info">
-          CNME
-        </button>
-        <p class="popup-info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-        <button class="button" id="app-info">
-          Over app
-        </button>
-        <p class="popup-info2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
-      </span>
-    </div>
-  </div>
-</div>
 <script>
-$('.menu-item').click(function() {
-  $('.popup-black').fadeIn(0);
-  $('.popup').fadeIn(0);
-  $('.close').fadeIn(0);
-});
-
-$('.close').click(function() {
-  $('.popup-black').fadeOut(0);
-  $('.popup').fadeOut(0);
-  $('.close').fadeOut(0);
-  $('.popup-content').fadeOut(0);
-});
-
-$('#menu-right1').click(function() {
-  $('#popup1').fadeIn(0);
-});
-$('#menu-left2').click(function() {
-  $('#popup2').fadeIn(0);
-});
-$('#menu-right2').click(function() {
-  $('#popup3').fadeIn(0);
-});
-
 $('#cnme-info').click(function() {
   $('.popup-info').slideToggle();
   $('.popup-info2').slideUp();
@@ -215,12 +198,6 @@ $('#app-info').click(function() {
   $('.popup-info2').slideToggle();
   $('.popup-info').slideUp();
 });
-
-/*
-document.getElementById("menu-left1").addEventListener("click", function(){
-  document.getElementById("menu").classList.remove("js-droptop");
-});
-*/
 </script>
 </body>
 </html>
