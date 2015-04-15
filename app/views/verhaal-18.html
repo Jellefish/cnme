@@ -16,7 +16,7 @@
   <span id="popup-content1" class="popup-content">
     <h1>Goed</h1>
     <span class="voltooide-vraag">Je hebt de vraag goed beantwoord! Tik op volgende je punten te krijgen.</span>
-    <a ng-href="#/verhaal-19" class="button popup-button">Volgende</a>
+    <a ng-href="#/verhaal-19" class="button popup-button score50">Volgende</a>
     <img id="trophy" src="/images/balloons.png" alt="flat-trophy">
   </span>
 </div>
@@ -60,6 +60,12 @@ $('.close').click(function() {
   $('.popup-content').fadeOut(0);
   $('#quiz').fadeIn(0);
 });
+
+$('.score50').one("click", function() {
+        $('#huidige-score-resultaat').html('50 punten');
+        $('#voortgang-resultaat').html('50%');
+        $('#voortgang').attr('src', 'images/voortgang50-15.png');
+    });
 
   $('body').css('background','url(/images/achtergrond2.jpg) no-repeat');
   $('body').css('background-size','cover');

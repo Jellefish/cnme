@@ -178,7 +178,7 @@ nav ul li {
 
 .overlay.js-droptop {
   top: 0;
-  transition: top 0.4s ease-in-out;
+  transition: top 0.8s ease-in-out;
 }
 
 svg {
@@ -311,10 +311,9 @@ svg {
 #voortgang {
   bottom:20px;
   position:absolute;
-  left:40px;;
+  left:5px;;
   right:0;
   z-index:9999;
-  width:75%;
 
 }
 
