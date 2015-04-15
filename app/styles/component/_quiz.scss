@@ -59,3 +59,21 @@
   margin-top:-90px !important;
 }
 
+#quiz input {
+  color: black;
+  padding: 8px;
+  font-size: 24px;
+}
+
+.auto-height {
+  min-height: 150px !important;
+}
+
+.buttonfade {
+  opacity: 1;
+  transition: .5s linear all;
+}
+
+.buttonfade.ng-hide {
+  opacity: 0
+}

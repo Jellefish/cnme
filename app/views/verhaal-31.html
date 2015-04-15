@@ -9,15 +9,19 @@
 </header>
 <div style="height:120vh;background:url(/images/achtergrond4.jpg) no-repeat;background-size:cover;position:fixed;top:0;left:0;" id="achtergrond-verhaal"></div>
 <div id="main-area">
-    <div id="textballon-rechts">
-      <p> Vraag 3</p>
+  <div id="quiz" class="auto-height">
+    <p>Vraag 3: Heeft het beestje vleugels? Hoeveel?</p>
+    <div>
+      <input ng-model="questionfield" type="text">
     </div>
-    <img class="char-left laag" src="/images/meike.png" alt="boswachter-ruud">
+  </div>
+
+    <img style="margin-top: 100px !important;" class="char-left laag" src="/images/meike.png" alt="boswachter-ruud">
 </div>
 
 <div id="footer">
   <div class="button-wrap">
       <a class="button" ng-href="#/verhaal-30">&#60; VORIGE</a>
-      <a class="button" ng-href="#/verhaal-32">VOLGENDE &#62;</a>
+      <a ng-show="questionfield" class="button buttonfade" ng-href="#/verhaal-32">VOLGENDE &#62;</a>
   </div>
 </div>
