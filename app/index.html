@@ -61,8 +61,8 @@
         <span id="huidige-score">
           Huidige score
         </span>
-        <span id="huidige-score-resultaat" ng-model="score">
-          0 punten
+        <span id="huidige-score-resultaat" ng-controller="ScoreCtrl">
+          {{score}} punten
         </span>
         <img id="trophy" src="/images/flatTrophy.png" alt="flat-trophy">
       </span>
