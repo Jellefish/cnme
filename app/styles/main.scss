@@ -151,7 +151,7 @@ img {
 
 
 
-                                                               /* ========= MENU ========= */
+     /* ========= MENU ========= */
 nav {
   width:100%;
   float:left;
@@ -167,52 +167,45 @@ nav ul {
 
 nav ul li {
   border-radius:10px;
-  padding-top:25px;
   font-size:30px;
   position:relative;
   overflow:hidden;
-}
-
-#menu-left1, #menu-left2 {
-  margin-right:5px;
-}
-
-#menu-left1 img {
-  position:absolute;
-  left:-25%;
-  bottom:-90px;
-  max-width:200px;
-}
-
-#menu-right1 img {
-  position:absolute;
-  right:-50%;
-  bottom:-55px;
-  max-width:250px;
-}
-
-#menu-left2 img {
-  position:absolute;
-  left:-50%;
-  bottom:-55px;
-  max-width:240px;
-}
-
-#menu-right2 img {
-  position: absolute;
-  left:0;
-  right:0;
-  bottom:-30px;
-  max-width:155px;
-}
-
-.menu-item {
   float:left;
-  width:49%;
-  height:200px;
-  background-color:#31BA8E;
-  margin:0 0 5px 0;
+  width:48%;
   cursor:pointer;
+}
+
+.overlay.js-droptop {
+  top: 0;
+  transition: top 0.8s ease-in-out;
+}
+
+svg {
+  font-family: Londrina;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: -300vh;
+  z-index: 1000;
+  transition: top .6s ease-in-out;
+}
+
+.full-height-background {
+  width: 100%;
+  height: 100vh;
+  background: url(/images/bg.jpg) no-repeat;
+  background-size: cover;
+  position:fixed;
+  padding-bottom: 10vh;
+}
+
+.menu {
+  width: 100%;
+  text-align: center;
+  position: absolute;
 }
 
 #terug {
@@ -418,6 +411,11 @@ nav ul li {
   padding: 10px;
   background-color: #ffffff;
   border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  box-shadow: none;
+  border: none;
 }
 
 #cameraInput {

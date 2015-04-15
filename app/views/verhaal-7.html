@@ -77,6 +77,11 @@ var imageUploadButton = document.getElementById('uploader');
       document.getElementById('preview').src = localStorage.getItem('image');
     }
 
+    $('.score25').one("click", function() {
+        $('#huidige-score-resultaat').html('25 punten');
+        $('#voortgang-resultaat').html('25%');
+    });
+
   $('body').css('background','url(/images/achtergrond1.jpg) no-repeat');
   $('body').css('background-size','cover');
 </script>
