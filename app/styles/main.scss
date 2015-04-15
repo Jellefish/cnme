@@ -178,7 +178,7 @@ nav ul li {
 
 .overlay.js-droptop {
   top: 0;
-  transition: top 0.8s ease-in-out;
+  transition: top 1s ease-in-out;
 }
 
 svg {
@@ -191,7 +191,7 @@ svg {
   position: absolute;
   top: -300vh;
   z-index: 1000;
-  transition: top .6s ease-in-out;
+  transition: top 1s ease-in-out;
 }
 
 .full-height-background {
@@ -220,30 +220,44 @@ svg {
 }
 
 /* POPUP */
+.jsfadein {
+  opacity: 1 !important;
+  z-index: 1666 !important;
+  transition: opacity 0.4s;
+}
+
+.jspopupdrop {
+  top: 145px !important;
+  transition: top 0.8s;
+}
+
 .popup-black {
   width:100%;
-  height:100%;
+  min-height:100%;
   background-color:rgba(0,0,0,0.8);
   position:fixed;
   left:0;
   top:0;
-  display:none;
-  z-index:9998;
+  opacity: 0;
+  z-index:-1666;
+  transition: opacity 0.4s, z-index 0.8s;
 }
+
 .popup {
   height:400px;
   width:75%;
-  position:relative;
+  position:absolute;
   background-color:#ececec;
   border-radius:20px;
   left:0;
   right:0;
-  top:145px;
+  top:-300vw;
   margin:0 auto;
   padding-top:0;
-  display:none;
-  z-index:9998;
-  }
+  transition: top 0.8s;
+  display:block;
+  z-index: 9999;
+}
 
 .popup h1 {
   width:100%;
@@ -252,25 +266,22 @@ svg {
   background-color:#31BA8E;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  top:-23px;
-  position:absolute;
+  top:-86px;
+  position:relative;
   padding-top:15px;
 }
 
 .close {
-  position:absolute;
-  top:40px;
+  position:relative;
+  top: -100px;
   width:60px;
   left:0;
   right:0;
   margin:0 auto;
-  display:none;
   cursor:pointer;
-  z-index:9999;
 }
 
 .popup-content {
-  display:none;
 }
 
 #voltooid {

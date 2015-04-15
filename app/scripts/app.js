@@ -167,12 +167,14 @@ myApp.controller('MasterController', ['$scope', '$animate', function($scope, $an
     $animate.removeClass('#menu', 'js-droptop');
   };
 
-  $scope.openPopup = function(selector, jsclass) {
-    $animate.addClass(selector, jsclass);
+  $scope.openPopup = function(selector1, jsclass1, selector2, jsclass2) {
+    $animate.addClass(selector1, jsclass1);
+    $animate.addClass(selector2, jsclass2);
   };
 
-  $scope.closePopup = function(selector, jsclass) {
-    $animate.removeClass(selector, jsclass);
+  $scope.closePopup = function(selector1, jsclass1, selector2, jsclass2) {
+    $animate.removeClass(selector1, jsclass1);
+    $animate.removeClass(selector2, jsclass2);
   };
 
   $scope.scoreSet = function(score) {
@@ -186,3 +188,37 @@ myApp.controller('MasterController', ['$scope', '$animate', function($scope, $an
   });
 
 }]);
+
+/*
+myApp.factory('ScoreFactory', function() {
+
+  var currentScore;
+
+  if(!localStorage.getItem('score')){
+    localStorage.setItem('score', 0)
+  }
+  return {
+    getScore: function(){
+      return currentScore = parseInt(localStorage.getItem('score'));
+    },
+    setScore: function(incr){
+      var cur = parseInt(localStorage.getItem('score'));
+      cur += incr;
+      localStorage.setItem('score', cur);
+    }
+  }
+});
+
+(function(){
+
+  myApp.controller('ScoreCtrl', ['$scope', '$http', 'ScoreFactory', function($scope, $http, ScoreFactory) {
+
+    $scope.upScore = function(inc){
+      ScoreFactory.setScore(inc);
+      $scope.score = ScoreFactory.getScore();
+    }
+
+    $scope.score = ScoreFactory.getScore();
+  }])
+
+})()*/
