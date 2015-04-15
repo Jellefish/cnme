@@ -28,6 +28,10 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/noandroid', {
+        templateUrl: 'views/noandroid.html',
+        controller: 'NoandroidCtrl'
+      })
       .when('/verhaal', {
         templateUrl: 'views/verhaal.html',
         controller: 'VerhaalCtrl'
