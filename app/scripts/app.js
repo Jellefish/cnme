@@ -159,41 +159,6 @@ angular
 
 var myApp = angular.module('cnmeApp');
 
-myApp.controller('MasterController', ['$scope', '$animate', function($scope, $animate){
-
-  $scope.score = 0;
-
-  $scope.menuOpen = function() {
-    $animate.addClass('#menu', 'js-droptop');
-  };
-
-  $scope.menuClose = function() {
-    $animate.removeClass('#menu', 'js-droptop');
-  };
-
-  $scope.openPopup = function(selector1, jsclass1, selector2, jsclass2) {
-    $animate.addClass(selector1, jsclass1);
-    $animate.addClass(selector2, jsclass2);
-  };
-
-  $scope.closePopup = function(selector1, jsclass1, selector2, jsclass2) {
-    $animate.removeClass(selector1, jsclass1);
-    $animate.removeClass(selector2, jsclass2);
-  };
-
-  $scope.scoreSet = function(score) {
-    if (score > localStorage.getItem('score')) {
-      localStorage.setItem('score', score);
-    }
-  };
-
-  $scope.$watch('scoreSet', function() {
-    $scope.score = localStorage.getItem('score');
-  });
-
-}]);
-
-
 myApp.factory('ScoreFactory', function() {
 
   var currentScore;
@@ -207,15 +172,34 @@ myApp.factory('ScoreFactory', function() {
     },
     setScore: function(incr){
       var cur = parseInt(localStorage.getItem('score'));
-      cur += incr;
+      cur = incr;
       localStorage.setItem('score', cur);
     }
   };
 });
 
+
 (function(){
 
-  myApp.controller('ScoreCtrl', ['$scope', '$http', 'ScoreFactory', function($scope, $http, ScoreFactory) {
+  myApp.controller('MasterController', ['$scope', '$http', '$animate', 'ScoreFactory', function($scope, $http, $animate, ScoreFactory){
+
+    $scope.menuOpen = function() {
+      $animate.addClass('#menu', 'js-droptop');
+    };
+
+    $scope.menuClose = function() {
+      $animate.removeClass('#menu', 'js-droptop');
+    };
+
+    $scope.openPopup = function(selector1, jsclass1, selector2, jsclass2) {
+      $animate.addClass(selector1, jsclass1);
+      $animate.addClass(selector2, jsclass2);
+    };
+
+    $scope.closePopup = function(selector1, jsclass1, selector2, jsclass2) {
+      $animate.removeClass(selector1, jsclass1);
+      $animate.removeClass(selector2, jsclass2);
+    };
 
     $scope.upScore = function(inc){
       ScoreFactory.setScore(inc);
@@ -224,5 +208,4 @@ myApp.factory('ScoreFactory', function() {
 
     $scope.score = ScoreFactory.getScore();
   }]);
-
 })();
