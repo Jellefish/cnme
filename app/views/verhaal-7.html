@@ -12,7 +12,7 @@
 <div id="footer">
   <div class="button-wrap">
       <a class="button" ng-href="#/verhaal-6">&#60; VORIGE</a>
-      <a id="volgende" class="button score25" ng-href="#/verhaal-8">VOLGENDE &#62;</a>
+      <a id="volgende" class="button score25" ng-href="#/verhaal-8" ng-click="upScore(25)">VOLGENDE &#62;</a>
   </div>
 </div>
 
@@ -76,12 +76,6 @@ var imageUploadButton = document.getElementById('uploader');
     if(localStorage.getItem('image')){
       document.getElementById('preview').src = localStorage.getItem('image');
     }
-
-    $('.score25').one("click", function() {
-        $('#huidige-score-resultaat').html('25 punten');
-        $('#voortgang-resultaat').html('25%');
-        $('#voortgang').attr('src', 'images/voortgang25.png');
-    });
 
   $('body').css('background','url(/images/achtergrond1.jpg) no-repeat');
   $('body').css('background-size','cover');

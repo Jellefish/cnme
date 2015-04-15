@@ -172,7 +172,7 @@ myApp.factory('ScoreFactory', function() {
     },
     setScore: function(incr){
       var cur = parseInt(localStorage.getItem('score'));
-      cur += incr;
+      cur = incr;
       localStorage.setItem('score', cur);
     }
   };

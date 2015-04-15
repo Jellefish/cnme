@@ -13,7 +13,7 @@
   <span id="popup-content1" class="popup-content">
     <h1>Goed</h1>
     <span class="voltooide-vraag">Je hebt de vraag goed beantwoord! Tik op volgende om door te gaan.</span>
-    <a ng-href="#/verhaal-19" class="button popup-button" ng-click="closePopup('#popup-overlay', 'jsfadein', '#popup-goed', 'jspopupdrop')">Volgende</a>
+    <a ng-href="#/verhaal-19" class="button popup-button" ng-click="closePopup('#popup-overlay', 'jsfadein', '#popup-goed', 'jspopupdrop'); upScore(50);">Volgende</a>
     <img id="trophy" src="/images/balloons.png" alt="flat-trophy">
   </span>
 </div>
@@ -35,11 +35,6 @@
   </div>
 
 <script>
-$('.score50').one("click", function() {
-        $('#huidige-score-resultaat').html('50 punten');
-        $('#voortgang-resultaat').html('50%');
-        $('#voortgang').attr('src', 'images/voortgang50.png');
-    });
 
   $('body').css('background','url(/images/achtergrond2.jpg) no-repeat');
   $('body').css('background-size','cover');
