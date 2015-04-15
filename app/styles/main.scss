@@ -3,6 +3,11 @@
   color:#fff;
 }
 
+::-moz-selection {
+  background-color:#47B07C;
+  color:#fff;
+}
+
 @media only screen and (orientation: landscape) {
 
 @import 'base/normalize';
