@@ -1,5 +1,5 @@
                                                                 <!-- VERHAAL -->
-<div id="achtergrond-verhaal" data-ng-init="menuOpen()"></div>
+<div style="height:120vh;background:url(/images/achtergrond.jpg) no-repeat;background-size:cover;position:fixed;top:0;left:0;" id="achtergrond-verhaal" data-ng-init="menuOpen()"></div>
 <header>
   <button id="hamburger" ng-click="menuOpen()">
     <div></div>
@@ -22,8 +22,3 @@
       <a class="button" ng-href="#/verhaal-2">VOLGENDE &#62;</a>
   </div>
 </div>
-
-<script>
-  $('body').css('background','url(/images/achtergrond.jpg) no-repeat');
-  $('body').css('background-size','cover');
-</script>
