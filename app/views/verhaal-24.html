@@ -8,19 +8,41 @@
    </button>
 </header>
 <div id="main-area">
-    <div id="textballon-rechts">
-      <p> verhaal-24.</p>
+   <div class="box">    
+        <input id="qty" value="0" />
+        <button id="up" onclick="modify_qty(1)">+1</button>
     </div>
-    <img class="char-left laag" src="/images/blub.png" alt="boswachter-ruud">
 </div>
 
 <div id="footer">
   <div class="button-wrap">
       <a class="button" ng-href="#/verhaal-23">&#60; VORIGE</a>
-      <a class="button" ng-href="#/verhaal-25">VOLGENDE &#62;</a>
+      <a class="button" id="volgendeCounter" ng-href="#/verhaal-25">VOLGENDE &#62;</a>
   </div>
 </div>
 
+<script>
+document.getElementById("volgendeCounter").style.display = "none";
+function modify_qty(val) {
+    var qty = document.getElementById('qty').value;
+    var new_qty = parseInt(qty,10) + val;
+    
+    if (new_qty < 0) {
+        new_qty = 0;
+    }
+
+    if (new_qty > 49) {
+        new_qty = 50;
+    }
+
+    if (new_qty > 9) {
+        document.getElementById("volgendeCounter").style.display = "block";
+    }
+    
+    document.getElementById('qty').value = new_qty;
+    return new_qty;
+}
+</script>
 <script>
   $('body').css('background','url(/images/achtergrond3.jpg) center no-repeat');
   $('body').css('background-size','cover');

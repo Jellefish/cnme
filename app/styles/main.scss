@@ -404,6 +404,38 @@ svg {
   width:80%;
   color:#595959;
 }
+
+.box {
+  position:absolute;
+  left:0;
+  right:0;
+  margin:0 auto;
+  text-align:center;
+  top:140px;
+}
+
+#qty {
+  background-color:#47B07C;
+  border:none;
+  border-radius:100px;
+  padding:38px 40px;
+  font-size:50px;
+  width:55px;
+  text-align:center;
+}
+#qty:focus {
+  outline:none;
+}
+
+#up {
+  display:block;
+  margin:0 auto;
+  margin-top:25px;
+  color:#454545;
+  border:none;
+  background-color:#fff;
+  font-size:25px;
+}
                                                                /* ========= VERHAALLijN ========= */
 #hamburger span {
   display: block;
