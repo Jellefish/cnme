@@ -132,3 +132,37 @@ angular
         redirectTo: '/'
       });
   });
+
+var myApp = angular.module('cnmeApp');
+
+myApp.controller('MasterController', ['$scope', '$animate', function($scope, $animate){
+
+  $scope.score = 0;
+
+  $scope.menuOpen = function() {
+    $animate.addClass('#menu', 'js-droptop');
+  };
+
+  $scope.menuClose = function() {
+    $animate.removeClass('#menu', 'js-droptop');
+  };
+
+  $scope.openPopup = function(selector, jsclass) {
+    $animate.addClass(selector, jsclass);
+  };
+
+  $scope.closePopup = function(selector, jsclass) {
+    $animate.removeClass(selector, jsclass);
+  };
+
+  $scope.scoreSet = function(score) {
+    if (score > localStorage.getItem('score')) {
+      localStorage.setItem('score', score);
+    }
+  };
+
+  $scope.$watch('scoreSet', function() {
+    $scope.score = localStorage.getItem('score');
+  });
+
+}]);
