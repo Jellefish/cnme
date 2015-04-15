@@ -9,7 +9,7 @@
 </header>
 <div id="main-area">
     <div id="textballon-rechts">
-      <p> verhaal-25.</p>
+      <p> Bedankt voor het helpen. Doordat de Maas nu minder vuil is, ben ik een blije vis.</p>
     </div>
     <img class="char-left laag" src="/images/blub.png" alt="boswachter-ruud">
 </div>
@@ -17,11 +17,18 @@
 <div id="footer">
   <div class="button-wrap">
       <a class="button" ng-href="#/verhaal-24">&#60; VORIGE</a>
-      <a class="button" ng-href="#/diploma">VOLGENDE &#62;</a>
+      <a class="button score75" ng-href="#/verhaal-26">VOLGENDE &#62;</a>
   </div>
 </div>
 
 <script>
+
+    $('.score75').one("click", function() {
+        $('#huidige-score-resultaat').html('75 punten');
+        $('#voortgang-resultaat').html('75%');
+        $('#voortgang').attr('src', 'images/voortgang75.png');
+    });
+
   $('body').css('background','url(/images/achtergrond3.jpg) center no-repeat');
   $('body').css('background-size','cover');
 </script>
