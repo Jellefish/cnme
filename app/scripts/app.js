@@ -189,13 +189,13 @@ myApp.controller('MasterController', ['$scope', '$animate', function($scope, $an
 
 }]);
 
-/*
+
 myApp.factory('ScoreFactory', function() {
 
   var currentScore;
 
   if(!localStorage.getItem('score')){
-    localStorage.setItem('score', 0)
+    localStorage.setItem('score', 0);
   }
   return {
     getScore: function(){
@@ -206,7 +206,7 @@ myApp.factory('ScoreFactory', function() {
       cur += incr;
       localStorage.setItem('score', cur);
     }
-  }
+  };
 });
 
 (function(){
@@ -216,9 +216,9 @@ myApp.factory('ScoreFactory', function() {
     $scope.upScore = function(inc){
       ScoreFactory.setScore(inc);
       $scope.score = ScoreFactory.getScore();
-    }
+    };
 
     $scope.score = ScoreFactory.getScore();
-  }])
+  }]);
 
-})()*/
+})();
