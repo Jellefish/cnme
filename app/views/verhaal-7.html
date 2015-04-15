@@ -1,4 +1,4 @@
-                                                                <!-- FOTO -->
+<div style="height:120vh;background:url(/images/achtergrond1.jpg) no-repeat;background-size:cover;position:fixed;top:0;left:0;" id="achtergrond-verhaal"></div>                                                                <!-- FOTO -->
 <div style="min-height:100vh;" id="main-area">
     <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
     <img src="" alt="" id="preview">
@@ -76,7 +76,4 @@ var imageUploadButton = document.getElementById('uploader');
     if(localStorage.getItem('image')){
       document.getElementById('preview').src = localStorage.getItem('image');
     }
-
-  $('body').css('background','url(/images/achtergrond1.jpg) no-repeat');
-  $('body').css('background-size','cover');
 </script>
