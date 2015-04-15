@@ -203,30 +203,5 @@ myApp.factory('ScoreFactory', function() {
     };
 
     $scope.score = ScoreFactory.getScore();
-  /*
-    $scope.scoreSet = function(score) {
-      if (score > localStorage.getItem('score')) {
-        localStorage.setItem('score', score);
-      }
-    };
-
-    $scope.$watch('scoreSet', function() {
-      $scope.score = localStorage.getItem('score');
-    });
-  */
   }]);
 })();
-
-
-
-/*
-  myApp.controller('ScoreCtrl', ['$scope', '$http', 'ScoreFactory', function($scope, $http, ScoreFactory) {
-
-    $scope.upScore = function(inc){
-      ScoreFactory.setScore(inc);
-      $scope.score = ScoreFactory.getScore();
-    };
-
-    $scope.score = ScoreFactory.getScore();
-  }]);
-*/
